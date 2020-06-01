@@ -250,7 +250,7 @@
     </div>
     <div hidden class="info item2" id="faded">
     </div>
-    <div class="container">
+    <div hidden class="container">
         <div hidden class="info item1">
             <h1>About</h1>
             <div class="imageBox">
@@ -303,7 +303,6 @@
         let entry = 1;
         let info = false;
         let exited = false;
-        let mouseDown = 0;
 
         $(".container").scroll(function () {
             if (imgState === 2) {
@@ -363,31 +362,25 @@
         });
 
         $(document).click(function () {
-            const mouseUp = new Date().getTime();
             if (!exited) {
-                if (mouseUp - mouseDown < 300) {
-                    let body = $(document.body);
-                    if (!info && imgState != 0) {
-                        if (imgState === 2) {
-                            entry = 1;
-                            $("#faded").hide();
-                            $("#faded img:nth-child(1)").show();
-                        }
-                        $("#background img#top").css("opacity", 0);
-                        info = true;
-                        setTimeout(() => {
-                            $(document.body).removeClass();
-                            dragscroll.reset();
-                            body.css('cursor', 'default');
-
-                            $(".item" + imgState).fadeIn("slow");
-                        }, 1000);
+                let body = $(document.body);
+                if (!info && imgState != 0) {
+                    if (imgState === 2) {
+                        entry = 1;
+                        $("#faded").hide();
+                        $("#faded img:nth-child(1)").show();
                     }
+                    $(".container").show();
+                    $("#background img#top").css("opacity", 0);
+                    info = true;
+                    setTimeout(() => {
+                        $(document.body).removeClass();
+                        dragscroll.reset();
+                        body.css('cursor', 'default');
+
+                        $(".item" + imgState).fadeIn("slow");
+                    }, 1000);
                 }
-            } else {
-                setTimeout(() => {
-                    exited = false;
-                }, 1600);
             }
         });
 
@@ -398,20 +391,21 @@
                 info = false;
                 $(".info").fadeOut("slow");
                 setTimeout(() => {
+                    $(".container").hide();
                     $("#background img#top").css("opacity", 1);
                     $(document.body).addClass("dragscroll");
                     dragscroll.reset();
                     $(document.body).css('cursor', 'grab');
                 }, 600);
+                setTimeout(() => {
+                    exited = false;
+                }, 1000);
             }
         }
 
         $(document).mousedown(function () {
-            mouseDown = new Date().getTime();
-            if (!info) {
-                if (imgState === 0) {
-                    $(document.body).css('cursor', 'grabbing');
-                }
+            if (!info && imgState === 0) {
+                $(document.body).css('cursor', 'grabbing');
             }
         });
 
