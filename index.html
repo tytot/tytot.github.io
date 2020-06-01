@@ -36,13 +36,18 @@
 
         .container {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            /* bring your own prefixes */
-            transform: translate(-50%, -50%);
-            max-width: 600px;
             overflow: auto;
             -ms-overflow-style: none;
+            width: 100%;
+        }
+
+        .container .info {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+
+        .container .item1 {
+            margin-bottom: 25px;
         }
 
         /* Hide scrollbar for Chrome, Safari and Opera */
@@ -61,7 +66,7 @@
 
         .item2 img {
             position: fixed;
-            max-width: 1000px;
+            width: 1200px;
             top: 50%;
             left: 50%;
             /* bring your own prefixes */
@@ -217,7 +222,7 @@
                 } else {
                     entryHTML = entryHTML.concat(`<div class="entry">`);
                 }
-               entryHTML = entryHTML.concat(`
+                entryHTML = entryHTML.concat(`
                     <div class="content">
                         <h2 style="text-decoration: underline;">${entry.name}</h2>
                         <h3>Description</h3>
