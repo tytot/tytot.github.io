@@ -376,9 +376,9 @@
                 let body = $(document.body);
                 if (!info && imgState != 0) {
                     if (imgState === 2) {
-                        entry = 1;
-                        $("#faded").hide();
+                        $("#faded img:nth-child(" + entry + ")").hide();
                         $("#faded img:nth-child(1)").show();
+                        entry = 1;
                     }
                     $(".container").show();
                     $("#background img#top").css("opacity", 0);
@@ -400,6 +400,7 @@
                 exited = true;
                 info = false;
                 $(".info").fadeOut("slow");
+                
                 setTimeout(() => {
                     $(".container").hide();
                     $("#background img#top").css("opacity", 1);
