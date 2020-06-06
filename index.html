@@ -184,10 +184,31 @@
         .social:hover>.click:hover {
             opacity: 1;
         }
+
+        .pdf {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .video {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+            margin-bottom: 30px;
+        }
+        .video iframe{
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="dragscroll.js"></script>
     <script src="portfolio.js"></script>
+    <script src="pdfobject.js"></script>
     <script>
         $(window).load(function () {
             let theWindow = $(window),
@@ -210,9 +231,9 @@
         $(document).ready(function () {
             entries.forEach((entry, index) => {
                 if (index === 0) {
-                    $("#faded").append("<img src=" + entry.image + "></img>");
+                    $("#faded").append("<img src=img/" + entry.image + "></img>");
                 } else {
-                    $("#faded").append("<img hidden src=" + entry.image + "></img>");
+                    $("#faded").append("<img hidden src=img/" + entry.image + "></img>");
                 }
                 let entryHTML = ``;
                 if (index === entries.length - 1) {
@@ -247,8 +268,8 @@
 
 <body class="dragscroll">
     <div id="background">
-        <img src="bkg.jpg" id="bottom" class="wall" />
-        <img src="home-0.jpg" id="top" class="wall" />
+        <img src="img/bkg.jpg" id="bottom" class="wall" />
+        <img src="img/home-0.jpg" id="top" class="wall" />
     </div>
     <div hidden class="info item2" id="faded">
     </div>
@@ -256,8 +277,8 @@
         <div hidden class="info item1">
             <h1>About</h1>
             <div class="imageBox">
-                <img src="Tyler.JPG" />
-                <img src="niko.jpg" class="hoverImg" />
+                <img src="img/Tyler.JPG" />
+                <img src="img/niko.jpg" class="hoverImg" />
             </div>
             <p> My name is Tyler Lin and I am a junior at Centennial High School.
                 I have lived in Maryland for 10 years after previously living in Iowa and Kansas.
@@ -301,7 +322,24 @@
         </div>
         <div hidden class="info item3">
             <h1>Extras</h1>
-            <p style="text-align: center;">Coming soon.</p>
+            <h2>Papers</h2>
+            <h3><a href="pdf/Mathematics_in_Basketball.pdf">Mathematics in Basketball</a></h3>
+            <div class="pdf">
+                <iframe src="pdf/Mathematics_in_Basketball.pdf" width="100%" height="600px"></iframe>
+            </div>
+            <h3><a href="pdf/Feynman_s_Technique_for_Computing_Integrals.pdf">Feynman's Technique for Computing Integrals</a></h3>
+            <div class="pdf">
+                <iframe src="pdf/Feynman_s_Technique_for_Computing_Integrals.pdf" width="100%" height="600px"></iframe>
+            </div>
+            <h2>Videos</h2>
+            <h3>Tennis</h3>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNXJFdvXBcbauBRtcNZ_EESJBKxIFnWpR" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <h3>NBA</h3>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNXJFdvXBcbZDmX8pBr2omyYaeomQDDHa" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
     <div hidden class="arrow item1 item2 item3" onclick="exitInfo()">
@@ -367,7 +405,7 @@
                 } else if (body.css('cursor') === 'pointer') {
                     body.css('cursor', 'grab');
                 }
-                $wall.attr("src", "home-" + imgState + ".jpg");
+                $wall.attr("src", "img/home-" + imgState + ".jpg");
             }
         });
 
