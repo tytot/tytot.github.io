@@ -1,5 +1,15 @@
 let entries = [
     {
+        "name": "BrainFun",
+        "description": "A learning platform created to teach young children the concepts behind programming using Brainf*ck, an esoteric programming language. The website features 19 unique exercies, an intuitive UI with a custom console and tape visualizer, and Firebase authentication for progress saving. BrainFun was made with Vue.js and employs material design principles. It won honorable mention at the 2020 'Same Home, Different Hacks' hackathon.",
+        "links": {
+            "github": "https://github.com/agoldstein03/Brainfun",
+            "link": "https://brainfun.tech/"
+        } ,
+        "tags": "Vue.js, Material Design, HTML, CSS, Javascript, Brainf*ck, Firebase",
+        "image": "brainfun.png"
+    },
+    {
         "name": "Bubble Fishing",
         "description": "An almost-limitless arcade game made in Unity 3D for iOS. Players control a physics-defying bubble with the goal of sinking as deep in the ocean as possible. The game includes 15 different sea creatures, power-ups, achievements, and leaderboards. Scripted using C#.",
         "links": {
