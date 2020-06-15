@@ -1,7 +1,7 @@
 let entries = [
     {
         "name": "BrainFun",
-        "description": "A learning platform created to teach young children the concepts behind programming using Brainf*ck, an esoteric programming language. The website features 19 unique exercies, an intuitive UI with a custom console and tape visualizer, and Firebase authentication for progress saving. BrainFun was made with Vue.js and employs material design principles. It won honorable mention at the 2020 'Same Home, Different Hacks' hackathon.",
+        "description": "A learning platform created to teach children the concepts behind programming through Brainf*ck, an esoteric language. The website features 19 unique exercies, an intuitive UI with a custom console and tape visualizer, and Firebase authentication. Made with Vue.js and material design, BrainFun won honorable mention at the 2020 'Same Home, Different Hacks' hackathon.",
         "links": {
             "github": "https://github.com/agoldstein03/Brainfun",
             "link": "https://brainfun.tech/"
