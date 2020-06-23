@@ -1,9 +1,20 @@
 let entries = [
     {
+        "name": "MedNet",
+        "description": "An interoperable and scalable mobile-phone based communication system that connects hospital departments in need of equipment to hospitals with surplus via an interactive SMS bot and a dynamically updating web server. The system is backed by a Google Cloud MySQL database Express API and a Firestore Flask API. MedNet pulls contacts from health worker registries.",
+        "links": {
+            "github": "https://github.com/yuhwanlee1/Defhacks-2020",
+            "dev": "https://devpost.com/software/mednet-12ryge",
+        } ,
+        "tags": "Apache, Node.js, Express, Flask, Mysql, Firestore, Google Cloud",
+        "image": "mednet.png"
+    },
+    {
         "name": "BrainFun",
         "description": "A learning platform created to teach children the concepts behind programming through Brainf*ck, an esoteric language. The website features 19 unique exercies, an intuitive UI with a custom console and tape visualizer, and Firebase authentication. Made with Vue.js and material design, BrainFun won honorable mention at the 2020 'Same Home, Different Hacks' hackathon.",
         "links": {
             "github": "https://github.com/agoldstein03/Brainfun",
+            "dev": "https://devpost.com/software/brainfun-fqvu65",
             "link": "https://brainfun.tech/"
         } ,
         "tags": "Vue.js, Material Design, HTML, CSS, Javascript, Brainf*ck, Firebase",

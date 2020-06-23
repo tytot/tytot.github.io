@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tyler's Home</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/32a7d86392.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=IBM+Plex+Serif&display=swap');
@@ -252,9 +252,12 @@
                         <h3>Links</h3>
                         <div class="social">`);
                 for (let [key, value] of Object.entries(entry.links)) {
+                    let fa = "fab";
+                    if (key === "link")
+                        fa = "fas";
                     const link = `
                             <a class="btn click" href="${value}" target="_blank">
-                                <i class="fa fa-${key}" aria-hidden="true"></i>
+                                <i class="${fa} fa-${key}" aria-hidden="true"></i>
                             </a>`;
                     entryHTML = entryHTML.concat(link);
                 }
@@ -421,6 +424,8 @@
                         $("#faded img:nth-child(1)").show();
                         entry = 1;
                     }
+                    body.removeClass("dragscroll");
+                    dragscroll.reset();
                     $(".container").show();
                     $("#background img#top").css("opacity", 0);
                     info = true;
@@ -448,6 +453,8 @@
                     $(document.body).addClass("dragscroll");
                     dragscroll.reset();
                     $(document.body).css('cursor', 'grab');
+                    body.addClass("dragscroll");
+                    dragscroll.reset();
                 }, 600);
                 setTimeout(() => {
                     exited = false;
