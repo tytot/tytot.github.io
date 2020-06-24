@@ -185,6 +185,10 @@
             opacity: 1;
         }
 
+        .link {
+            margin-bottom: 10px;
+        }
+
         .pdf {
             overflow: hidden;
             padding-bottom: 100%;
@@ -256,13 +260,13 @@
                     if (key === "link")
                         fa = "fas";
                     const link = `
-                            <a class="btn click" href="${value}" target="_blank">
+                            <a class="btn click link" href="${value}" target="_blank">
                                 <i class="${fa} fa-${key}" aria-hidden="true"></i>
                             </a>`;
                     entryHTML = entryHTML.concat(link);
                 }
                 entryHTML = entryHTML.concat(`</div>
-                        <h3>Tags</h3>
+                        <h3 style="margin-block-start: calc(1em - 10px);">Tags</h3>
                         <p class="tags">${entry.tags}</p>
                     </div>
                 </div>`);

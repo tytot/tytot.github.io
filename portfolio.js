@@ -1,7 +1,7 @@
 let entries = [
     {
         "name": "MedNet",
-        "description": "An interoperable and scalable mobile-phone based communication system that connects hospital departments in need of equipment to hospitals with surplus via an interactive SMS bot and a dynamically updating web server. The system is backed by a Google Cloud MySQL database Express API and a Firestore Flask API. MedNet pulls contacts from health worker registries.",
+        "description": "An interoperable and scalable mobile-phone based communication system that connects hospital departments in need of equipment to hospitals with surplus via an interactive SMS bot and a dynamically updating web server. The system is backed by a Google Cloud MySQL database Express API and a Firestore Flask API.",
         "links": {
             "github": "https://github.com/yuhwanlee1/Defhacks-2020",
             "dev": "https://devpost.com/software/mednet-12ryge",
