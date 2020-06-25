@@ -5,17 +5,19 @@ let entries = [
         "links": {
             "github": "https://github.com/yuhwanlee1/Defhacks-2020",
             "dev": "https://devpost.com/software/mednet-12ryge",
+            "youtube": "https://www.youtube.com/watch?v=583rX-v6OKk"
         } ,
         "tags": "Apache, Node.js, Express, Flask, Mysql, Firestore, Google Cloud",
         "image": "mednet.png"
     },
     {
         "name": "BrainFun",
-        "description": "A learning platform created to teach children the concepts behind programming through Brainf*ck, an esoteric language. The website features 19 unique exercies, an intuitive UI with a custom console and tape visualizer, and Firebase authentication. Made with Vue.js and material design, BrainFun won honorable mention at the 2020 'Same Home, Different Hacks' hackathon.",
+        "description": "A learning platform created to teach children the concepts behind programming through Brainf*ck, an esoteric language. The website features 19 unique exercises, an intuitive UI with a custom console and tape visualizer, and Firebase authentication. BrainFun won honorable mention at the 2020 'Same Home, Different Hacks' hackathon.",
         "links": {
+            "link": "https://brainfun.tech/",
             "github": "https://github.com/agoldstein03/Brainfun",
             "dev": "https://devpost.com/software/brainfun-fqvu65",
-            "link": "https://brainfun.tech/"
+            "youtube": "https://www.youtube.com/watch?v=OePcA8RWerU"
         } ,
         "tags": "Vue.js, Material Design, HTML, CSS, Javascript, Brainf*ck, Firebase",
         "image": "brainfun.png"
@@ -24,8 +26,9 @@ let entries = [
         "name": "Bubble Fishing",
         "description": "An almost-limitless arcade game made in Unity 3D for iOS. Players control a physics-defying bubble with the goal of sinking as deep in the ocean as possible. The game includes 15 different sea creatures, power-ups, achievements, and leaderboards. Scripted using C#.",
         "links": {
+            "link": "https://apps.apple.com/us/app/bubble-fishing/id1496553186?ls=1",
             "github": "https://github.com/tytot/bubble-fishing-src",
-            "link": "https://apps.apple.com/us/app/bubble-fishing/id1496553186?ls=1"
+            "youtube": "https://www.youtube.com/watch?v=TYXJr6MEfYY"
         },
         "tags": "C#, Unity, iOS, arcade, indie",
         "image": "bubble-fishing.png"
