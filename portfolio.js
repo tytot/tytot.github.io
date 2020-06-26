@@ -7,7 +7,7 @@ let entries = [
             "dev": "https://devpost.com/software/mednet-12ryge",
             "youtube": "https://www.youtube.com/watch?v=583rX-v6OKk"
         } ,
-        "tags": "Apache, Node.js, Express, Flask, Mysql, Firestore, Google Cloud",
+        "tags": "Apache, Node.js, Express, Flask, MySQL, Firestore, Google Cloud",
         "image": "mednet.png"
     },
     {
@@ -28,7 +28,8 @@ let entries = [
         "links": {
             "link": "https://apps.apple.com/us/app/bubble-fishing/id1496553186?ls=1",
             "github": "https://github.com/tytot/bubble-fishing-src",
-            "youtube": "https://www.youtube.com/watch?v=TYXJr6MEfYY"
+            "youtube": "https://www.youtube.com/watch?v=TYXJr6MEfYY",
+            "pied-piper-pp": "bubble-fishing/privacy-policy.html"
         },
         "tags": "C#, Unity, iOS, arcade, indie",
         "image": "bubble-fishing.png"
