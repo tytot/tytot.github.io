@@ -37,7 +37,8 @@
 
         .container {
             position: fixed;
-            overflow: auto;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
             -ms-overflow-style: none;
             width: 100%;
             height: 100%;
@@ -311,10 +312,14 @@
             <h1>Extras</h1>
             <h2>Papers</h2>
             <h3><a href="pdf/Mathematics_in_Basketball.pdf">Mathematics in Basketball</a></h3>
-            <h3><a href="pdf/Feynman_s_Technique_for_Computing_Integrals.pdf">Feynman's Technique for Computing Integrals</a></h3>
+            <h3><a href="pdf/Feynman_s_Technique_for_Computing_Integrals.pdf">Feynman's Technique for Computing
+                    Integrals</a></h3>
             <h2>Videos</h2>
-            <h3><a href="https://www.youtube.com/watch?v=3zSn_VzCR7c&list=PLNXJFdvXBcbauBRtcNZ_EESJBKxIFnWpR">Tennis</a></h3>
-            <h3><a href="https://www.youtube.com/watch?v=jXGsNZoqMGM&list=PLNXJFdvXBcbZDmX8pBr2omyYaeomQDDHa">Basketball</a></h3>
+            <h3><a href="https://www.youtube.com/watch?v=3zSn_VzCR7c&list=PLNXJFdvXBcbauBRtcNZ_EESJBKxIFnWpR">Tennis</a>
+            </h3>
+            <h3><a
+                    href="https://www.youtube.com/watch?v=jXGsNZoqMGM&list=PLNXJFdvXBcbZDmX8pBr2omyYaeomQDDHa">Basketball</a>
+            </h3>
         </div>
     </div>
     <div hidden class="arrow item1 item2 item3" onclick="exitInfo()">
@@ -393,14 +398,13 @@
                         $("#faded img:nth-child(1)").show();
                         entry = 1;
                     }
-                    body.removeClass("dragscroll");
-                    dragscroll.reset();
                     $(".container").show();
                     $("#background img#top").css("opacity", 0);
                     info = true;
+                    $("#background").css("overflow", "hidden");
+                    body.removeClass();
+                    dragscroll.reset();
                     setTimeout(() => {
-                        $(document.body).removeClass();
-                        dragscroll.reset();
                         body.css('cursor', 'default');
 
                         $(".item" + imgState).fadeIn("slow");
@@ -415,15 +419,14 @@
                 exited = true;
                 info = false;
                 $(".info").fadeOut("slow");
-                
+
                 setTimeout(() => {
                     $(".container").hide();
                     $("#background img#top").css("opacity", 1);
+                    $("#background").css("overflow", "auto");
                     $(document.body).addClass("dragscroll");
                     dragscroll.reset();
                     $(document.body).css('cursor', 'grab');
-                    body.addClass("dragscroll");
-                    dragscroll.reset();
                 }, 600);
                 setTimeout(() => {
                     exited = false;
