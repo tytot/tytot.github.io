@@ -192,8 +192,9 @@
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="dragscroll.js"></script>
-    <script src="portfolio.js"></script>
+    <script src="lib/bodyScrollLock.js"></script>
+    <script src="lib/dragscroll.js"></script>
+    <script src="lib/portfolio.js"></script>
     <script>
         $(window).load(function () {
             let theWindow = $(window),
@@ -401,9 +402,10 @@
                     $(".container").show();
                     $("#background img#top").css("opacity", 0);
                     info = true;
-                    $("#background").css("overflow", "hidden");
                     body.removeClass();
                     dragscroll.reset();
+                    bodyScrollLock.disableBodyScroll($("#background"))
+                    bodyScrollLock.enableBodyScroll($(".container"))
                     setTimeout(() => {
                         body.css('cursor', 'default');
 
@@ -423,9 +425,9 @@
                 setTimeout(() => {
                     $(".container").hide();
                     $("#background img#top").css("opacity", 1);
-                    $("#background").css("overflow", "auto");
                     $(document.body).addClass("dragscroll");
                     dragscroll.reset();
+                    bodyScrollLock.enableBodyScroll($("#background"))
                     $(document.body).css('cursor', 'grab');
                 }, 600);
                 setTimeout(() => {
