@@ -212,45 +212,6 @@
             }
             theWindow.resize(resizeBg).trigger("resize");
         });
-
-        $(document).ready(function () {
-            entries.forEach((entry, index) => {
-                if (index === 0) {
-                    $("#faded").append("<img src=img/" + entry.image + "></img>");
-                } else {
-                    $("#faded").append("<img hidden src=img/" + entry.image + "></img>");
-                }
-                let entryHTML = ``;
-                if (index === entries.length - 1) {
-                    entryHTML = entryHTML.concat(`<div class="entry" style="margin-bottom: 50px;">`);
-                } else {
-                    entryHTML = entryHTML.concat(`<div class="entry">`);
-                }
-                entryHTML = entryHTML.concat(`
-                    <div class="content">
-                        <h2 style="text-decoration: underline;">${entry.name}</h2>
-                        <h3>Description</h3>
-                        <p>${entry.description}</p>
-                        <h3>Links</h3>
-                        <div class="social">`);
-                for (let [key, value] of Object.entries(entry.links)) {
-                    let fa = "fab";
-                    if (key === "link")
-                        fa = "fas";
-                    const link = `
-                            <a class="btn click link" href="${value}" target="_blank">
-                                <i class="${fa} fa-${key}" aria-hidden="true"></i>
-                            </a>`;
-                    entryHTML = entryHTML.concat(link);
-                }
-                entryHTML = entryHTML.concat(`</div>
-                        <h3>Tags</h3>
-                        <p class="tags">${entry.tags}</p>
-                    </div>
-                </div>`);
-                $("#generate").append(entryHTML);
-            });
-        });
     </script>
 </head>
 
@@ -332,6 +293,65 @@
         let info = false;
         let exited = false;
         let scrollPos = [0, 0];
+        let hasTouchScreen = false;
+        if ("maxTouchPoints" in navigator) {
+            hasTouchScreen = navigator.maxTouchPoints > 0;
+        } else if ("msMaxTouchPoints" in navigator) {
+            hasTouchScreen = navigator.msMaxTouchPoints > 0;
+        } else {
+            let mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+            if (mQ && mQ.media === "(pointer:coarse)") {
+                hasTouchScreen = !!mQ.matches;
+            } else if ('orientation' in window) {
+                hasTouchScreen = true; // deprecated, but good fallback
+            } else {
+                // Only as a last resort, fall back to user agent sniffing
+                let UA = navigator.userAgent;
+                hasTouchScreen = (
+                    /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+                    /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
+                );
+            }
+        }
+
+        $(document).ready(function () {
+            entries.forEach((entry, index) => {
+                if (index === 0) {
+                    $("#faded").append("<img src=img/" + entry.image + "></img>");
+                } else {
+                    $("#faded").append("<img hidden src=img/" + entry.image + "></img>");
+                }
+                let entryHTML = ``;
+                if (index === entries.length - 1) {
+                    entryHTML = entryHTML.concat(`<div class="entry" style="margin-bottom: 50px;">`);
+                } else {
+                    entryHTML = entryHTML.concat(`<div class="entry">`);
+                }
+                entryHTML = entryHTML.concat(`
+                    <div class="content">
+                        <h2 style="text-decoration: underline;">${entry.name}</h2>
+                        <h3>Description</h3>
+                        <p>${entry.description}</p>
+                        <h3>Links</h3>
+                        <div class="social">`);
+                for (let [key, value] of Object.entries(entry.links)) {
+                    let fa = "fab";
+                    if (key === "link")
+                        fa = "fas";
+                    const link = `
+                            <a class="btn click link" href="${value}" target="_blank">
+                                <i class="${fa} fa-${key}" aria-hidden="true"></i>
+                            </a>`;
+                    entryHTML = entryHTML.concat(link);
+                }
+                entryHTML = entryHTML.concat(`</div>
+                        <h3>Tags</h3>
+                        <p class="tags">${entry.tags}</p>
+                    </div>
+                </div>`);
+                $("#generate").append(entryHTML);
+            });
+        });
 
         $(".container").scroll(function () {
             if (imgState === 2) {
@@ -414,12 +434,13 @@
                     $(".container").show();
                     $("#background img#top").css("opacity", 0);
                     info = true;
-                    enableScrollLock();
+                    if (hasTouchScreen) {
+                        enableScrollLock();
+                    }
                     body.removeClass();
                     dragscroll.reset();
                     setTimeout(() => {
                         body.css('cursor', 'default');
-
                         $(".item" + imgState).fadeIn("slow");
                     }, 1000);
                 }
@@ -436,7 +457,9 @@
                 setTimeout(() => {
                     $(".container").hide();
                     $("#background img#top").css("opacity", 1);
-                    disableScrollLock();
+                    if (hasTouchScreen) {
+                        disableScrollLock();
+                    }
                     $(document.body).addClass("dragscroll");
                     dragscroll.reset();
                     $(document.body).css('cursor', 'grab');
