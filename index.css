@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=IBM+Plex+Serif&display=swap');
+
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    overflow: hidden;
+    cursor: grab;
+    background-color: black;
+    --scrollbarBG: black;
+    --thumbBG: #FFFDD0;
+}
+
+.bgwidth {
+    width: 100%;
+}
+
+.bgheight {
+    height: 100%;
+}
+
+#background img {
+    position: absolute;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.container {
+    position: fixed;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    width: 100%;
+    height: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+.container::-webkit-scrollbar {
+    width: 16px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 8px;
+    border: 4px solid var(--scrollbarBG);
+}
+
+.container .info {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.container .item1 {
+    margin-bottom: 20px;
+}
+
+.info {
+    color: white;
+}
+
+.info a {
+    display: block;
+    text-align: center;
+}
+
+.item2 img {
+    position: fixed;
+    width: 1200px;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.imageBox {
+    position: relative;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+.imageBox .hoverImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.imageBox:hover .hoverImg {
+    display: block;
+}
+
+.imageBox img {
+    max-width: 200px;
+    border: 2px solid white;
+}
+
+.arrow {
+    position: fixed;
+    color: white;
+}
+
+.astext {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 14px;
+    font-size: 28px;
+    color: white;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: center;
+    margin-block-end: 0px;
+}
+
+h2 i {
+    padding-left: 10px;
+}
+
+p {
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.entry {
+    height: 670px;
+}
+
+.content {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+.tags {
+    text-align: center;
+}
+
+.social {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.social a {
+    display: inline-block;
+}
+
+.social .btn {
+    color: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    font-size: 20px;
+    width: 75px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 15px;
+    padding: 1%;
+    transition: ease 0.3s;
+}
+
+.social .box {
+    color: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 1%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    transition: ease 0.3s;
+}
+
+.social .click:hover {
+    color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.social:hover > .click {
+    opacity: 0.5;
+}
+
+.social:hover > .click:hover {
+    opacity: 1;
+}
+
+#exclamation {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
