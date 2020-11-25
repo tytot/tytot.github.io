@@ -9,7 +9,7 @@ html {
     cursor: grab;
     background-color: black;
     --scrollbarBG: black;
-    --thumbBG: #FFFDD0;
+    --thumbBG: #fffdd0;
 }
 
 .bgwidth {
@@ -197,6 +197,23 @@ p {
 
 .social:hover > .click:hover {
     opacity: 1;
+}
+
+a:link {
+    color: #5C88DA;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #E35205;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
 }
 
 #exclamation {
