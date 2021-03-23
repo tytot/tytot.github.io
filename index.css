@@ -6,10 +6,18 @@ html {
     padding: 0px;
     height: 100%;
     overflow: hidden;
-    cursor: grab;
+    cursor: move;
     background-color: black;
     --scrollbarBG: rgba(0, 0, 0, 0);
     --thumbBG: white;
+}
+
+img {
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .bgwidth {
@@ -41,7 +49,7 @@ html {
 }
 
 .container::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 
 .container::-webkit-scrollbar-track {
@@ -50,7 +58,6 @@ html {
 
 .container::-webkit-scrollbar-thumb {
     background-color: var(--thumbBG);
-    border-radius: 6px;
 }
 
 .container .info {
@@ -144,7 +151,7 @@ p {
 .arrow {
     position: fixed;
     top: 0;
-    margin-top: calc(32px * 0.67);
+    margin-top: calc(4em / 3);
 }
 
 .astext {
@@ -168,16 +175,21 @@ p {
     width: 100vw;
     top: 0;
     left: 0;
-    height: 128px;
-    background-image: linear-gradient(black, 69%, rgba(0, 0, 0, 0));
+    height: 6em;
+    background-image: linear-gradient(black, 75%, rgba(0, 0, 0, 0));
 }
 
 .wrapper {
-    padding-top: 96px;
+    padding-top: 6em;
+}
+
+#generate {
+    padding-top: 2em;
 }
 
 .entry {
     height: 670px;
+    overflow: hidden;
 }
 
 .content {
