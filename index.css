@@ -20,14 +20,6 @@ img {
     user-select: none;
 }
 
-.bgwidth {
-    width: 100%;
-}
-
-.bgheight {
-    height: 100%;
-}
-
 #background img {
     position: absolute;
     -webkit-transition: opacity 1s ease-in-out;
