@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=IBM+Plex+Serif&display=swap');
 
-body,
 html {
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    overflow: hidden;
-    cursor: move;
     background-color: black;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
     --scrollbarBG: rgba(0, 0, 0, 0);
     --thumbBG: white;
+}
+html::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    cursor: grab;
 }
 
 img {
@@ -163,7 +169,7 @@ p {
 }
 
 .gradient {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     top: 0;
     left: 0;
