@@ -9,7 +9,7 @@ const Social = ({ animate }) => (
         <ul className={style.socialList}>
             {socialMedia.map(({ name, url, icon }, i) => (
                 <li key={i}>
-                    <a href={url} aria-label={name} target="_blank" rel="noreferrer">
+                    <a href={url} aria-label={name}>
                         <FontAwesomeIcon icon={icon} size="xl" />
                     </a>
                 </li>

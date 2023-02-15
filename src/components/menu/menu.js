@@ -67,7 +67,7 @@ const Menu = ({ animate }) => {
             if (!wrapperRef.current || wrapperRef.current.contains(event.target)) return
             setMenuOpen(false)
         }
-        
+
         document.addEventListener('mousedown', listener)
         document.addEventListener('touchstart', listener)
 
@@ -118,7 +118,7 @@ const Menu = ({ animate }) => {
                             ))}
                         </ol>
 
-                        <a href="/resume.pdf" className={style.resumeButton}>
+                        <a href="/Lin_Tyler_Resume.pdf" target="_blank" rel="noreferrer" className={style.resumeButton}>
                             Resume
                         </a>
                     </nav>

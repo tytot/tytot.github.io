@@ -30,9 +30,7 @@ const Projects = () => {
                     </div>
 
                     <h3 className={style.projectTitle}>
-                        <a href={Object.values(links)[0]} target="_blank" rel="noreferrer">
-                            {title}
-                        </a>
+                        <a href={Object.values(links)[0]}>{title}</a>
                     </h3>
 
                     <div className={style.projectDescription} dangerouslySetInnerHTML={{ __html: description }} />

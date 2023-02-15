@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
         const links = Array.from(document.querySelectorAll('a'))
         links.forEach((link) => {
             if (link.host !== window.location.host) {
-                link.setAttribute('rel', 'noopener noreferrer')
+                link.setAttribute('rel', 'noreferrer')
                 link.setAttribute('target', '_blank')
             }
         })

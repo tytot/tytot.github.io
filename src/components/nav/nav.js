@@ -55,7 +55,7 @@ const Nav = ({ animate }) => {
                     </ol>
 
                     <div className={revealClasses}>
-                        <a className={style.resumeButton} href="/resume.pdf">
+                        <a className={style.resumeButton} href="/Lin_Tyler_Resume.pdf" target="_blank" rel="noreferrer">
                             Resume
                         </a>
                     </div>
