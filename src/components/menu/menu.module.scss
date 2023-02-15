@@ -1,0 +1,166 @@
+@import '@styles/mixins';
+
+.menu {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+
+.hamburger-button {
+    --hamburger-width: 30px;
+    --ham-before: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+    --ham-before-active: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+    --ham-after: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    --ham-after-active: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+
+    display: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 0;
+
+    @media (max-width: 768px) {
+        display: flex;
+        position: relative;
+        z-index: 10;
+        margin-right: -15px;
+        padding: 15px;
+        background-color: transparent;
+    }
+
+    .ham-box {
+        position: relative;
+        width: var(--hamburger-width);
+        height: 24px;
+    }
+
+    .ham-box-inner {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: var(--hamburger-width);
+        height: 2px;
+        border-radius: var(--border-radius);
+        background-color: var(--green);
+        transition-duration: 0.22s;
+        transition-property: transform;
+        transition-delay: 0s;
+        transform: rotate(0deg);
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: auto;
+            right: 0;
+            width: var(--hamburger-width);
+            height: 2px;
+            border-radius: 4px;
+            background-color: var(--green);
+            transition-timing-function: ease;
+            transition-duration: 0.15s;
+            transition-property: transform;
+        }
+        &::before {
+            width: 120%;
+            top: -10px;
+            opacity: 1;
+            transition: var(--ham-before);
+        }
+        &::after {
+            width: 80%;
+            bottom: -10px;
+            transform: rotate(0);
+            transition: var(--ham-after);
+        }
+
+        &.active {
+            transition-delay: 0.12s;
+            transform: rotate(225deg);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            &::before {
+                width: 100%;
+                top: 0;
+                opacity: 0;
+                transition: var(--ham-before-active);
+            }
+            &::after {
+                width: 100%;
+                bottom: 0;
+                transform: rotate(-90deg);
+                transition: var(--ham-after-active);
+            }
+        }
+    }
+}
+
+.sidebar {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding: 50px 10px;
+        width: min(75vw, 400px);
+        height: 100vh;
+        background-color: var(--creamsicle-20);
+        box-shadow: -10px 0px 30px -15px var(--creamsicle-shadow);
+        z-index: 9;
+        transform: translateX(100vw);
+        visibility: hidden;
+        transition: var(--transition);
+    }
+
+    &.active {
+        @media (max-width: 768px) {
+            transform: translateX(0vw);
+            visibility: visible;
+        }
+    }
+
+    nav {
+        width: 100%;
+        color: var(--coffee-30);
+        font-family: var(--font-sans);
+        text-align: center;
+    }
+
+    ol {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            margin: 0 auto 20px;
+            font-size: var(--fz-xxl);
+            font-weight: 600;
+
+            @media (max-width: 600px) {
+                margin: 0 auto 10px;
+            }
+
+            svg {
+                margin-right: 10px;
+            }
+        }
+
+        a {
+            padding: 10px 20px;
+        }
+    }
+
+    .resume-button {
+        @include big-button;
+        margin: 10% auto 0;
+    }
+}
+
+.reveal {
+    composes: reveal from global;
+}

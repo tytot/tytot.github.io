@@ -1,0 +1,43 @@
+@import '@styles/mixins';
+
+.footer {
+    padding: 15px;
+    text-align: center;
+}
+
+.social-links {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: block;
+        max-width: 180px;
+        margin: 0 auto 10px;
+        color: var(--coffee-20);
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        a {
+            padding: 10px;
+        }
+    }
+}
+
+.credit {
+    color: var(--coffee-20);
+    font-size: var(--fz-sm);
+    line-height: 1;
+    
+    div {
+        margin: 10px 0;
+    }
+
+    .footnote {
+        font-size: var(--fz-xxs);
+    }
+}

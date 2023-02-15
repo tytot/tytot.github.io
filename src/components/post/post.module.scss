@@ -1,0 +1,218 @@
+@import '@styles/mixins';
+
+.post-header {
+    margin-bottom: 50px;
+    .tag {
+        margin-right: 10px;
+    }
+}
+
+.subtitle {
+    color: var(--coffee-10);
+    font-size: var(--fz-md);
+
+    .tag {
+        margin-right: 10px;
+        font-family: var(--font-mono);
+    }
+}
+
+.post-content {
+    margin-bottom: 100px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 2em 0 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+
+    figure {
+        margin: 2em 0;
+        text-align: center;
+
+        figure {
+            margin: 0;
+        }
+    }
+
+    img {
+        min-width: 240px;
+        max-width: 768px;
+        border-radius: var(--border-radius);
+    }
+
+    figcaption {
+        font-size: var(--fz-lg);
+        font-style: italic;
+        margin: 1em 1em 0 1em;
+    }
+
+    :global(.grouped) {
+        display: flex;
+        column-gap: 20px;
+        padding-bottom: 0.5em;
+
+        & > figure {
+            flex: 1 1 0;
+            counter-increment: subfigure;
+
+            & > figcaption::before {
+                content: '(' counter(subfigure, lower-alpha) ') ';
+                color: var(--coffee-30);
+                font-family: var(--font-mono);
+                font-size: var(--fz-sm);
+                font-style: normal;
+            }
+        }
+    }
+
+    :global(.scrollable), :global(.math-display) {
+        @include scroll-shadow(var(--creamsicle-10));
+        overflow-x: auto;
+        text-align: center;
+    }
+
+    :global(.katex) {
+        font-size: 1.1em !important;
+    }
+
+    :global(.katex-display) {
+        margin: 1em !important;
+        display: inline-block !important;
+    }
+
+    table {
+        table-layout: fixed;
+        width: 100%;
+        margin: 2em auto;
+        border: 1px solid var(--coffee-30);
+        border-collapse: collapse;
+        font-family: var(--font-mono);
+        max-width: 768px;
+
+        th, td:first-child {
+            background-color: var(--creamsicle-20);
+        }
+
+        th,
+        td {
+            padding: 0.5em;
+            border: 1px solid var(--coffee-30);
+            text-align: right;
+        }
+    }
+
+    code {
+        background-color: var(--creamsicle-30);
+        color: var(--coffee-30);
+        border-radius: var(--border-radius);
+        font-size: var(--fz-sm);
+        padding: 0.2em 0.4em;
+    }
+
+    pre code {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    p {
+        margin: 1em 0;
+        line-height: 1.5;
+    }
+
+    a[href^='http'] {
+        overflow-wrap: anywhere;
+        word-break: break-all;
+    }
+
+    div:global(.tag) {
+        scroll-margin-top: calc(var(--nav-scroll-height) + 50px);
+
+        & > span {
+            display: inline-block;
+            border-bottom: 1px solid var(--coffee-10);
+            padding-bottom: 10px;
+            margin: 1em 0 0 0;
+            color: var(--coffee-30);
+            font-family: var(--font-mono);
+            font-size: var(--fz-sm);
+            font-weight: 400;
+        }
+
+        & > figure {
+            margin: 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+
+            & > :first-child {
+                padding: 1em 1em 0 1em;
+            }
+
+            & > figcaption {
+                padding-bottom: 1em;
+            }
+        }
+
+        :global(.scrollable), :global(.math-display) {
+            border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+        }
+
+        &:hover,
+        &:focus,
+        &:target {
+            & > h3 {
+                font-weight: 600;
+            }
+
+            & > figure {
+                background-color: var(--creamsicle-20);
+            }
+
+            :global(.scrollable), :global(.math-display) {
+                @include scroll-shadow(var(--creamsicle-20));
+            }
+        }
+    }
+
+    a:global(.ref) {
+        color: var(--coffee-30);
+        font-family: var(--font-mono);
+        font-size: var(--fz-md);
+        font-style: normal;
+
+        &:hover,
+        &:focus,
+        &:active {
+            font-weight: 600;
+        }
+    }
+
+    :global(.bib) {
+       padding-left: 2em;
+       font-family: var(--font-mono);
+       font-size: var(--fz-md);
+
+        :global(.bib-entry) {
+            list-style-type: none;
+            text-indent: -2em;
+
+            cite {
+                font-style: normal;
+            }
+
+            a {
+                text-indent: 0;
+                display: inline;
+            }
+        }
+    }
+}

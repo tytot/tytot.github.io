@@ -1,0 +1,48 @@
+@import '@styles/mixins';
+
+.container {
+    a {
+        @include inline-link;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        .tag-header {
+            font-family: var(--font-mono);
+        }
+
+        a {
+            font-size: var(--fz-lg);
+            font-weight: 400;
+        }
+    }
+
+    ul {
+        li {
+            font-size: 24px;
+            h2 {
+                font-size: inherit;
+                margin: 0;
+                a {
+                    color: var(--coffee-20);
+                }
+            }
+            .subtitle {
+                color: var(--coffee-10);
+                font-size: var(--fz-sm);
+
+                .tag {
+                    margin-right: 10px;
+                    font-family: var(--font-mono);
+                }
+            }
+        }
+    }
+}
+
+.reveal {
+    composes: reveal from global;
+}

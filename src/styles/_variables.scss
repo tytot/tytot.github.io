@@ -1,0 +1,32 @@
+:root {
+    --creamsicle-10: #fdf3ec;
+    --creamsicle-20: #fce7d8;
+    --creamsicle-30: #f8cfb1;
+    --coffee-10: #9e7676;
+    --coffee-20: #815b5b;
+    --coffee-30: #594545;
+    --creamsicle-shadow: rgba(129, 91, 91, 0.7);
+    --green: #74a12e;
+    --green-tint: rgba(116, 161, 46, 0.1);
+    
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-3xl: 26px;
+    --fz-heading: 32px;
+
+    --border-radius: 8px;
+    --nav-height: 100px;
+    --nav-scroll-height: 70px;
+
+    --tab-height: 42px;
+    --tab-width: 120px;
+
+    --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition-duration: 250ms;
+    --transition: all var(--transition-duration) cubic-bezier(0.645, 0.045, 0.355, 1);
+}
