@@ -6,7 +6,7 @@
     right: auto;
 
     z-index: 10;
-    color: var(--coffee-20);
+    color: var(--secondary-20);
 
     @media (max-width: 1080px) {
         left: 20px;
@@ -28,7 +28,7 @@
             width: 1px;
             height: 90px;
             margin: 0 auto;
-            background-color: var(--coffee-20);
+            background-color: var(--secondary-20);
         }
     }
 }

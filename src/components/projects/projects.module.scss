@@ -47,7 +47,7 @@
         height: 100%;
         padding: 2rem 1.75rem;
         border-radius: var(--border-radius);
-        background-color: var(--creamsicle-20);
+        background-color: var(--primary-20);
         transition: var(--transition);
         overflow: auto;
     }
@@ -70,7 +70,7 @@
             display: flex;
             align-items: center;
             margin-right: -10px;
-            color: var(--coffee-20);
+            color: var(--secondary-20);
 
             a {
                 padding: 5px 7px;
@@ -80,7 +80,7 @@
 
     .project-title {
         margin: 0 0 10px;
-        color: var(--coffee-30);
+        color: var(--secondary-30);
         font-size: var(--fz-xxl);
 
         a {
@@ -100,7 +100,7 @@
     }
 
     .project-description {
-        color: var(--coffee-20);
+        color: var(--secondary-20);
         font-size: var(--fz-md);
 
         a {
@@ -118,7 +118,7 @@
         list-style: none;
 
         li {
-            color: var(--coffee-20);
+            color: var(--secondary-20);
             font-family: var(--font-mono);
             font-size: var(--fz-xxs);
             line-height: 1.75;

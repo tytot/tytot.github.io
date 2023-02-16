@@ -109,8 +109,8 @@
         padding: 50px 10px;
         width: min(75vw, 400px);
         height: 100vh;
-        background-color: var(--creamsicle-20);
-        box-shadow: -10px 0px 30px -15px var(--creamsicle-shadow);
+        background-color: var(--primary-20);
+        box-shadow: -10px 0px 30px -15px var(--shadow);
         z-index: 9;
         transform: translateX(100vw);
         visibility: hidden;
@@ -126,7 +126,7 @@
 
     nav {
         width: 100%;
-        color: var(--coffee-30);
+        color: var(--secondary-30);
         font-family: var(--font-sans);
         text-align: center;
     }

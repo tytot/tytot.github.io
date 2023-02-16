@@ -41,7 +41,7 @@
         padding: 2rem 1.75rem;
         border-radius: var(--border-radius);
         transition: var(--transition);
-        background-color: var(--creamsicle-20);
+        background-color: var(--primary-20);
     }
 
     .post-icon {
@@ -51,7 +51,7 @@
 
     .post-title {
         margin: 0 0 10px;
-        color: var(--coffee-30);
+        color: var(--secondary-30);
         font-size: var(--fz-xxl);
 
         a {
@@ -71,7 +71,7 @@
     }
 
     .post-excerpt {
-        color: var(--coffee-20);
+        color: var(--secondary-20);
         font-size: 17px;
     }
 
@@ -84,7 +84,7 @@
     }
 
     .post-date {
-        color: var(--coffee-20);
+        color: var(--secondary-20);
         font-size: var(--fz-xxs);
         text-transform: uppercase;
     }

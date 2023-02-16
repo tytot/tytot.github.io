@@ -3,17 +3,17 @@
         margin-bottom: 50px;
     }
     ul {
-        color: var(--coffee-20);
+        color: var(--secondary-20);
 
         li {
             font-size: var(--fz-xxl);
 
             a {
-                color: var(--coffee-20);
+                color: var(--secondary-20);
                 font-family: var(--font-mono);
 
                 .count {
-                    color: var(--coffee-10);
+                    color: var(--secondary-10);
                     font-size: var(--fz-md);
                 }
             }
