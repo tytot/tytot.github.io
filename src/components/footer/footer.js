@@ -20,12 +20,14 @@ const Footer = () => {
             </div>
 
             <div className={style.credit} tabIndex="-1">
-                <div>
-                    Built by <a href="https://github.com/tytot">Tyler Lin</a> using <a href="https://nextjs.org">Next.js</a>
-                </div>
-                <div className={style.footnote}>
-                    Inspired by Brittany Chiang
-                </div>
+                <p className={style.version}>
+                    <a href="https://tylerl.in">tylerl.in</a> v0.1.0
+                </p>
+                <p>
+                    Built by <a href="https://github.com/tytot">Tyler Lin</a> using{' '}
+                    <a href="https://nextjs.org">Next.js</a>
+                </p>
+                <p className={style.footnote}>Inspired by Brittany Chiang</p>
             </div>
         </footer>
     )
