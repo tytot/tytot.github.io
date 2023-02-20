@@ -188,6 +188,16 @@ img {
     vertical-align: middle;
 }
 
+[data-theme='dark'] {
+    img.dark-invert {
+        filter: invert(100%);
+    }
+
+    .no-filter img {
+        filter: initial;
+    }
+}
+
 svg {
     fill: currentColor;
     vertical-align: middle;

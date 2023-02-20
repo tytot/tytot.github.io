@@ -29,6 +29,10 @@
         transform: translateY(0px);
         background-color: var(--nav-background);
         box-shadow: 0 10px 30px -10px var(--shadow);
+
+        :global(.theme-toggle-container) {
+            height: var(--nav-scroll-height) !important;
+        }
     }
 }
 .header-scroll-down {
@@ -37,6 +41,10 @@
         height: var(--nav-scroll-height);
         transform: translateY(calc(var(--nav-scroll-height) * -1));
         box-shadow: 0 10px 30px -10px var(--shadow);
+
+        :global(.theme-toggle-container) {
+            height: var(--nav-scroll-height) !important;
+        }
     }
 }
 
@@ -52,21 +60,13 @@
 
     .logo {
         a {
-            color: var(--green);
+            color: var(--secondary-30);
             width: 42px;
             height: 42px;
 
             &:hover,
             &:focus {
-                svg {
-                    fill: var(--green-tint);
-                }
-            }
-
-            svg {
-                fill: none;
-                transition: var(--transition);
-                user-select: none;
+                color: var(--green);
             }
         }
     }
@@ -102,8 +102,14 @@
 
     .resume-button {
         @include small-button;
-        margin-left: 15px;
+        margin: 0 15px;
         font-size: var(--fz-md);
+    }
+
+    :global(.theme-toggle) {
+        font-size: 32px;
+        padding: 0 0 4px 15px;
+        color: var(--secondary-30);
     }
 }
 

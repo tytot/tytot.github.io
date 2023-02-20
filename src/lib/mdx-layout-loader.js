@@ -6,17 +6,19 @@ const TAG_REGEX = /<div id="([\w\d-]+)">/g
 const REF_REGEX = /\[([^\]]+)\]\(#([\w\d-]+)\)/g
 
 const toFigure = ({ alt, caption, index }, scrollable = false) => {
+    const image = `<ExportedImage src={img${index}} alt="${alt}" className="dark-invert" />`
+
     return `
 <figure>
 ${
     scrollable
         ? `
     <div className="scrollable">
-        <ExportedImage src={img${index}} alt="${alt}"/>
+        ${image}
     </div>
 `
         : `
-    <ExportedImage src={img${index}} alt="${alt}"/>
+    ${image}
 `
 }
     <figcaption>${caption ?? ''}</figcaption>

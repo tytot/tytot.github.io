@@ -101,12 +101,13 @@
 
     @media (max-width: 768px) {
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: space-between;
         position: fixed;
         top: 0;
         bottom: 0;
         right: 0;
-        padding: 50px 10px;
         width: min(75vw, 400px);
         height: 100vh;
         background-color: var(--primary-20);
@@ -158,6 +159,19 @@
     .resume-button {
         @include big-button;
         margin: 10% auto 0;
+    }
+
+    :global(.theme-toggle-container) {
+        display: flex;
+        width: 100%;
+        height: var(--nav-height);
+        padding: 0 25px;
+    }
+
+    :global(.theme-toggle) {
+        font-size: 32px;
+        color: var(--secondary-30);
+        padding: 0;
     }
 }
 

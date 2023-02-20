@@ -1,11 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import { useTheme } from 'next-themes'
+import { Expand } from '@theme-toggles/react'
 import { navLinks, revealInterval } from '@config'
 import { heroDelay, KEY_CODES, revealElements } from '@utils'
 import style from './menu.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Menu = ({ animate }) => {
+    const [mounted, setMounted] = useState(false)
+    const { resolvedTheme, setTheme } = useTheme()
+
     const [menuOpen, setMenuOpen] = useState(false)
     const toggleMenu = () => setMenuOpen(!menuOpen)
 
@@ -82,6 +87,8 @@ const Menu = ({ animate }) => {
     }, [menuOpen])
 
     useEffect(() => {
+        setMounted(true)
+
         if (animate) {
             revealElements(style.reveal, { container: '#__next', delay: heroDelay + revealInterval, distance: '0px' })
         }
@@ -106,6 +113,15 @@ const Menu = ({ animate }) => {
                     aria-hidden={!menuOpen}
                     tabIndex={menuOpen ? 1 : -1}
                 >
+                    <div className="theme-toggle-container">
+                        {mounted && (
+                            <Expand
+                                toggled={resolvedTheme === 'light'}
+                                toggle={(on) => setTheme(on ? 'light' : 'dark')}
+                                idPrefix="menu-"
+                            />
+                        )}
+                    </div>
                     <nav ref={navRef}>
                         <ol>
                             {navLinks.map(({ name, url, icon }, i) => (
@@ -122,6 +138,7 @@ const Menu = ({ animate }) => {
                             Resume
                         </a>
                     </nav>
+                    <div className="theme-toggle-container"></div>
                 </aside>
             </div>
         </div>

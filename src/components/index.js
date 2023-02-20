@@ -6,6 +6,7 @@ export { default as Footer } from './footer/footer'
 export { default as Hero } from './hero/hero'
 // export { default as Jobs } from './jobs/jobs';
 export { default as Layout } from './layout'
+export { default as Logo } from './logo'
 export { default as Menu } from './menu/menu'
 export { default as Nav } from './nav/nav'
 export { default as Post } from './post/post'

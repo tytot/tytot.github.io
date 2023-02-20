@@ -380,6 +380,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@theme-toggles/react@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@theme-toggles/react@npm:4.1.0"
+  peerDependencies:
+    react: ^16 || ^17 || ^18
+    react-dom: ^16 || ^17 || ^18
+  checksum: b818e66140d093df1bf9599588eb94cfc196318c8cafc9245c58ddcb6c2262685894669cb81183aaf342fe9b75437e548993229a70ebebddcb59e229f3776ec4
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -5574,6 +5584,7 @@ __metadata:
     "@mdx-js/react": ^2.2.1
     "@next/font": ^13.0.7
     "@next/mdx": ^13.1.5
+    "@theme-toggles/react": ^4.1.0
     eslint: 8.30.0
     eslint-config-next: 13.1.1
     eslint-plugin-unused-imports: ^2.0.0

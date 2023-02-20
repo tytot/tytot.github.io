@@ -52,16 +52,6 @@
         border-radius: var(--border-radius);
     }
 
-    @media (prefers-color-scheme: dark) {
-        img {
-            filter: invert(100%);
-        }
-
-        :global(.no-filter) img {
-            filter: initial;
-        }
-    }
-
     figcaption {
         font-size: var(--fz-lg);
         font-style: italic;
@@ -89,7 +79,7 @@
 
     :global(.scrollable),
     :global(.math-display) {
-        @include scroll-shadow(var(--primary-10));
+        @include scroll-shadow;
         overflow-x: auto;
         text-align: center;
     }
@@ -186,7 +176,7 @@
 
             :global(.scrollable),
             :global(.math-display) {
-                @include scroll-shadow(var(--primary-20));
+                @include scroll-shadow;
             }
         }
     }
@@ -222,5 +212,12 @@
                 display: inline;
             }
         }
+    }
+}
+
+[data-theme='dark'] .post-content {
+    :global(.scrollable),
+    :global(.math-display) {
+        @include scroll-shadow($shadow-color: rgba(0, 0, 0, 0.2), $shadow-size: 2em);
     }
 }
