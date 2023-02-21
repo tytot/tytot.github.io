@@ -4,6 +4,30 @@ export default function Document() {
     return (
         <Html>
             <Head>
+                <link rel="preload" href="/fonts/AndadaPro.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
+                <link
+                    rel="preload"
+                    href="/fonts/AndadaPro-Italic.ttf"
+                    as="font"
+                    type="font/ttf"
+                    crossOrigin="anonymous"
+                />
+                <link rel="preload" href="/fonts/Cabin.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
+                <link rel="preload" href="/fonts/Cabin-Italic.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
+                <link
+                    rel="preload"
+                    href="/fonts/SplineSansMono.ttf"
+                    as="font"
+                    type="font/ttf"
+                    crossOrigin="anonymous"
+                />
+                <link
+                    rel="preload"
+                    href="/fonts/SplineSansMono-Italic.ttf"
+                    as="font"
+                    type="font/ttf"
+                    crossOrigin="anonymous"
+                />
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2" />
