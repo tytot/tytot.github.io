@@ -13,7 +13,7 @@
         "dev": "next dev",
         "serve": "serve ./docs",
         "build": "next build",
-        "export": "next build && next export -o docs && next-image-export-optimizer",
+        "export": "next build && next export -o docs && next-image-export-optimizer && touch ./docs/.nojekyll",
         "start": "next start",
         "lint": "next lint"
     },
