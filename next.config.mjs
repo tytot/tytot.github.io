@@ -3,10 +3,7 @@ import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 
-const isProd = process.env.NODE_ENV === 'production'
-
 export default {
-    assetPrefix: isProd ? './' : undefined,
     eslint: {
         ignoreDuringBuilds: true,
     },

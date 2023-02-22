@@ -176,7 +176,7 @@
 
             :global(.scrollable),
             :global(.math-display) {
-                @include scroll-shadow;
+                @include scroll-shadow($background-color: var(--primary-20));
             }
         }
     }
