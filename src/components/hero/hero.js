@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import { revealInterval } from '@config'
-import { revealElements } from '@utils'
+import { revealElementsByClassName } from '@utils'
 import style from './hero.module.scss'
 
 const Hero = () => {
     useEffect(() => {
-        revealElements(style.reveal, { interval: revealInterval })
+        revealElementsByClassName(style.reveal, { interval: revealInterval })
     }, [])
 
     const one = <h1>Hi, my name is</h1>

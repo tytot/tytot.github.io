@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import Link from 'next/link'
 import { SEO } from '@components'
-import { revealElements } from '@utils'
+import { revealElementsByClassName } from '@utils'
 import { getPostsWithTag, tags } from '@utils/blog'
 import style from './[tag].module.scss'
 
 const TagTemplate = ({ tag, posts }) => {
     useEffect(() => {
-        revealElements(style.reveal)
+        revealElementsByClassName(style.reveal)
     }, [])
 
     return (

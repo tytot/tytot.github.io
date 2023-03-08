@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTag } from '@fortawesome/free-solid-svg-icons'
 import { linkMetadata, revealInterval } from '@config'
 import { projects } from '@content'
-import { revealElements } from '@utils'
+import { revealElementsByClassName } from '@utils'
 import style from './projects.module.scss'
 
 const Projects = () => {
     useEffect(() => {
-        revealElements(style.reveal, { interval: revealInterval })
+        revealElementsByClassName(style.reveal, { interval: revealInterval })
     }, [])
 
     const projectInner = ({ title, description, icon, links, tags }) => {

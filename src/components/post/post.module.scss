@@ -29,11 +29,34 @@
         margin: 2em 0 1em;
     }
 
-    h2 {
-        font-size: 2em;
+    p {
+        margin: 1em 0;
+        line-height: 1.5;
     }
-    h3 {
-        font-size: 1.5em;
+
+    blockquote {
+        margin: 2em 0;
+    }
+
+    code {
+        background-color: var(--primary-30);
+        color: var(--secondary-30);
+        border-radius: var(--border-radius);
+        font-size: var(--fz-sm);
+        padding: 0.2em 0.4em;
+    }
+
+    pre code {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    details {
+        margin: 1em 0;
+
+        &[open] summary {
+            margin-bottom: 0.5em;
+        }
     }
 
     figure {
@@ -46,16 +69,38 @@
         }
     }
 
+    figcaption {
+        font-size: var(--fz-lg);
+        font-style: italic;
+        padding: 1em 1em 0 1em;
+    }
+
     img {
         min-width: 240px;
         max-width: 768px;
         border-radius: var(--border-radius);
     }
 
-    figcaption {
-        font-size: var(--fz-lg);
-        font-style: italic;
-        padding: 1em 1em 0 1em;
+    table {
+        table-layout: fixed;
+        width: 100%;
+        margin: 2em auto;
+        border: 1px solid var(--secondary-30);
+        border-collapse: collapse;
+        font-family: var(--font-mono);
+        max-width: 768px;
+
+        th,
+        td:first-child {
+            background-color: var(--primary-20);
+        }
+
+        th,
+        td {
+            padding: 0.5em;
+            border: 1px solid var(--secondary-30);
+            text-align: right;
+        }
     }
 
     :global(.grouped) {
@@ -91,51 +136,6 @@
     :global(.katex-display) {
         margin: 1em !important;
         display: inline-block !important;
-    }
-
-    table {
-        table-layout: fixed;
-        width: 100%;
-        margin: 2em auto;
-        border: 1px solid var(--secondary-30);
-        border-collapse: collapse;
-        font-family: var(--font-mono);
-        max-width: 768px;
-
-        th,
-        td:first-child {
-            background-color: var(--primary-20);
-        }
-
-        th,
-        td {
-            padding: 0.5em;
-            border: 1px solid var(--secondary-30);
-            text-align: right;
-        }
-    }
-
-    code {
-        background-color: var(--primary-30);
-        color: var(--secondary-30);
-        border-radius: var(--border-radius);
-        font-size: var(--fz-sm);
-        padding: 0.2em 0.4em;
-    }
-
-    pre code {
-        background-color: transparent;
-        padding: 0;
-    }
-
-    p {
-        margin: 1em 0;
-        line-height: 1.5;
-    }
-
-    a[href^='http'] {
-        overflow-wrap: anywhere;
-        word-break: break-all;
     }
 
     div:global(.tag) {
@@ -211,7 +211,16 @@
                 text-indent: 0;
                 display: inline;
             }
+
+            &:target {
+                text-decoration: underline;
+            }
         }
+    }
+
+    a[href^='http'] {
+        overflow-wrap: anywhere;
+        word-break: break-all;
     }
 }
 
@@ -220,4 +229,8 @@
     :global(.math-display) {
         @include scroll-shadow($shadow-color: rgba(0, 0, 0, 0.2), $shadow-size: 2em);
     }
+}
+
+.reveal {
+    composes: reveal from global;
 }

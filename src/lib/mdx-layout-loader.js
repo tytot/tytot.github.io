@@ -4,6 +4,7 @@ const IMG_GROUP_REGEX = /(?:!\[.*\]\(.*\)[ \t]*(?:\r?\n.+)*)+(?:\r?\n\r?\n([^\r\
 const IMG_REGEX = /!\[(.*)\]\((.*)\)[ \t]*(?:\r?\n([^\r\n!<].*))*/g
 const TAG_REGEX = /<div id="([\w\d-]+)">/g
 const REF_REGEX = /\[([^\]]+)\]\(#([\w\d-]+)\)/g
+const DETAILS_REGEX = /<details>[\s\S]+?<\/details>/g
 
 const toFigure = ({ alt, caption, index }, scrollable = false) => {
     const image = `<ExportedImage src={img${index}} alt="${alt}" className="dark-invert" />`
@@ -69,6 +70,7 @@ ${caption ?? ''}
             `
         )
         .replaceAll(REF_REGEX, (_, text, tag) => `<a className="ref" href="#${tag}">${text}</a>`)
+        .replaceAll(DETAILS_REGEX, (match) => match.replaceAll(/\r?\n/g, ''))
 
     const imageImports = allImages.length
         ? `

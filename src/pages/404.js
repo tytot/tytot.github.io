@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import Link from 'next/link'
-import { revealElements } from '@utils'
+import { revealElementsByClassName } from '@utils'
 import { SEO } from '@components'
 import style from './404.module.scss'
 
 const NotFoundPage = () => {
     useEffect(() => {
-        revealElements(style.reveal)
+        revealElementsByClassName(style.reveal)
     }, [])
 
     return (

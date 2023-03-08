@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTag } from '@fortawesome/free-solid-svg-icons'
 import { linkMetadata } from '@config'
 import { featured } from '@content'
-import { revealElements } from '@utils'
+import { revealElementsByClassName } from '@utils'
 import style from './featured.module.scss'
 
 const Featured = () => {
     useEffect(() => {
-        revealElements(style.reveal)
+        revealElementsByClassName(style.reveal)
     }, [])
 
     return (

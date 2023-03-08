@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { Expand } from '@theme-toggles/react'
 import { navLinks, revealInterval } from '@config'
-import { heroDelay, KEY_CODES, revealElements } from '@utils'
+import { heroDelay, KEY_CODES, revealElementsByClassName } from '@utils'
 import style from './menu.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -90,7 +90,7 @@ const Menu = ({ animate }) => {
         setMounted(true)
 
         if (animate) {
-            revealElements(style.reveal, { container: '#__next', delay: heroDelay + revealInterval, distance: '0px' })
+            revealElementsByClassName(style.reveal, { container: '#__next', delay: heroDelay + revealInterval, distance: '0px' })
         }
     }, [])
 

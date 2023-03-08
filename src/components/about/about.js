@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import ExportedImage from 'next-image-export-optimizer'
-import { revealElements } from '@utils'
+import { revealElementsByClassName } from '@utils'
 import headshot from '@public/images/me.jpg'
 import style from './about.module.scss'
 
 const About = () => {
     useEffect(() => {
-        revealElements(style.reveal)
+        revealElementsByClassName(style.reveal)
     }, [])
 
     return (

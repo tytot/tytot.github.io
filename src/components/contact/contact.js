@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import { email } from '@config'
-import { revealElements } from '@utils'
+import { revealElementsByClassName } from '@utils'
 import style from './contact.module.scss'
 
 const Contact = () => {
     useEffect(() => {
-        revealElements(style.reveal)
+        revealElementsByClassName(style.reveal)
     }, [])
 
     return (

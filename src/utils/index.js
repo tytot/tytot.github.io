@@ -9,10 +9,14 @@ export const prefersReducedMotion = () => {
     return typeof window !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: no-preference)').matches
 }
 
-export const revealElements = async (classNames, options) => {
+export const revealElements = async (target, options) => {
     if (prefersReducedMotion()) return
     const ScrollReveal = (await import('scrollreveal')).default
-    ScrollReveal().reveal(`.${classNames.split(' ').join('.')}`, { ...revealOptions, ...options })
+    ScrollReveal().reveal(target, { ...revealOptions, ...options })
+}
+
+export const revealElementsByClassName = async (classNames, options) => {
+    revealElements(`.${classNames.split(' ').join('.')}`, options)
 }
 
 export const navDelay = (navLinks.length + 1) * revealInterval + revealOptions.duration

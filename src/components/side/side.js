@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import { heroDelay, navDelay, revealElements } from '@utils'
+import { heroDelay, navDelay, revealElementsByClassName } from '@utils'
 import style from './side.module.scss'
 
 const Side = ({ children, orientation, animate }) => {
     useEffect(() => {
         if (animate) {
-            revealElements(style.reveal, { container: '#__next', delay: heroDelay + navDelay })
+            revealElementsByClassName(style.reveal, { container: '#__next', delay: heroDelay + navDelay })
         }
     }, [])
 

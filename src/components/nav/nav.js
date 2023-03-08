@@ -6,7 +6,7 @@ import { Expand } from '@theme-toggles/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Logo, Menu } from '@components'
 import { navLinks, revealInterval } from '@config'
-import { heroDelay, revealElements } from '@utils'
+import { heroDelay, revealElementsByClassName } from '@utils'
 import style from './nav.module.scss'
 import '@theme-toggles/react/css/Expand.css'
 
@@ -26,7 +26,7 @@ const Nav = ({ animate }) => {
     useEffect(() => {
         setMounted(true)
 
-        revealElements(style.reveal, { container: '#__next', delay: heroDelay, interval: revealInterval })
+        revealElementsByClassName(style.reveal, { container: '#__next', delay: heroDelay, interval: revealInterval })
         window.addEventListener('scroll', handleScroll)
         return () => {
             window.removeEventListener('scroll', handleScroll)

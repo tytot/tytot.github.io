@@ -5,7 +5,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { SEO } from '@components'
 import { revealInterval } from '@config'
-import { revealElements } from '@utils'
+import { revealElementsByClassName } from '@utils'
 import { posts } from '@utils/blog'
 import style from './index.module.scss'
 
@@ -13,7 +13,7 @@ const BlogPage = ({ posts }) => {
     library.add(fas)
 
     useEffect(() => {
-        revealElements(style.reveal, { interval: revealInterval })
+        revealElementsByClassName(style.reveal, { interval: revealInterval })
     }, [])
 
     return (
