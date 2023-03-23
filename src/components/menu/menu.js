@@ -90,7 +90,11 @@ const Menu = ({ animate }) => {
         setMounted(true)
 
         if (animate) {
-            revealElementsByClassName(style.reveal, { container: '#__next', delay: heroDelay + revealInterval, distance: '0px' })
+            revealElementsByClassName(style.reveal, {
+                container: '#__next',
+                delay: heroDelay + revealInterval,
+                distance: '0px',
+            })
         }
     }, [])
 
@@ -134,7 +138,7 @@ const Menu = ({ animate }) => {
                             ))}
                         </ol>
 
-                        <a href="/Lin_Tyler_Resume.pdf" target="_blank" rel="noreferrer" className={style.resumeButton}>
+                        <a href="/Lin_Tyler_Resume.pdf" className={style.resumeButton}>
                             Resume
                         </a>
                     </nav>

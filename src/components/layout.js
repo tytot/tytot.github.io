@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
 import { Email, Footer, Nav, Social } from '@components'
+import { newTabHrefs } from '@config'
 import Link from 'next/link'
 
 const Layout = ({ children }) => {
     useEffect(() => {
         const links = Array.from(document.querySelectorAll('a'))
         links.forEach((link) => {
-            if (link.host !== window.location.host) {
+            console.log(link.href)
+            if (link.host !== window.location.host || newTabHrefs.includes(link.getAttribute('href'))) {
                 link.setAttribute('rel', 'noreferrer')
                 link.setAttribute('target', '_blank')
             }

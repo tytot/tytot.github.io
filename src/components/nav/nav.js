@@ -39,7 +39,7 @@ const Nav = ({ animate }) => {
         } else if (scrollDirection === 'DOWN') {
             setScrollingUp(false)
         }
-    })
+    }, [scrollDirection])
 
     return (
         <header className={scrolledToTop ? style.header : scrollingUp ? style.headerScrollUp : style.headerScrollDown}>
@@ -62,7 +62,7 @@ const Nav = ({ animate }) => {
                     </ol>
 
                     <div className={revealClasses}>
-                        <a className={style.resumeButton} href="/Lin_Tyler_Resume.pdf" target="_blank" rel="noreferrer">
+                        <a className={style.resumeButton} href="/Lin_Tyler_Resume.pdf">
                             Resume
                         </a>
                     </div>

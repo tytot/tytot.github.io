@@ -8,68 +8,69 @@ module.exports = {
         url: 'https://tylerl.in',
         image: '/images/og.png',
         social: {
-            twitter: '@s_tylin'
-        }
+            twitter: '@s_tylin',
+        },
     },
     email: 'tylerhlin@gmail.com',
     navLinks: [
         {
             name: 'About',
             url: '/#about',
-            icon: faIdCard
+            icon: faIdCard,
         },
         {
             name: 'Projects',
             url: '/#projects',
-            icon: faBriefcase
+            icon: faBriefcase,
         },
         {
             name: 'Contact',
             url: '/#contact',
-            icon: faEnvelope
+            icon: faEnvelope,
         },
         {
             name: 'Blog',
             url: '/blog',
-            icon: faKeyboard
+            icon: faKeyboard,
         },
     ],
     socialMedia: [
         {
             name: 'GitHub',
             url: 'https://github.com/tytot',
-            icon: faGithubSquare
+            icon: faGithubSquare,
         },
         {
             name: 'Instagram',
             url: 'https://www.instagram.com/t.1in',
-            icon: faInstagramSquare
+            icon: faInstagramSquare,
         },
         {
             name: 'Linkedin',
             url: 'https://www.linkedin.com/in/tylerhlin',
-            icon: faLinkedin
+            icon: faLinkedin,
         },
     ],
     linkMetadata: {
         github: {
             label: 'GitHub Link',
-            icon: faGithub
+            icon: faGithub,
         },
         devpost: {
             label: 'Devpost Link',
-            icon: faDev
+            icon: faDev,
         },
         external: {
             label: 'External Link',
-            icon: faLink
-        }
+            icon: faLink,
+        },
     },
+    newTabHrefs: ['/Lin_Tyler_Resume.pdf', '/the-puzzled-cube'],
     revealOptions: {
         distance: '20px',
         duration: 500,
         easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
-        viewFactor: 0.25
+        viewFactor: 0.25,
     },
-    revealInterval: 100
+    revealInterval: 100,
 }

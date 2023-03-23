@@ -1,16 +1,18 @@
 import React from 'react'
-import { About, Contact, Featured, Hero, Projects, SEO } from '@components'
+import { About, Contact, Featured, Hero, Layout, Projects, SEO } from '@components'
 
 const IndexPage = () => (
     <>
         <SEO />
-        <main>
-            <Hero />
-            <About />
-            <Featured />
-            <Projects />
-            <Contact />
-        </main>
+        <Layout>
+            <main>
+                <Hero />
+                <About />
+                <Featured />
+                <Projects />
+                <Contact />
+            </main>
+        </Layout>
     </>
 )
 

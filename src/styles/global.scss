@@ -41,7 +41,8 @@ body {
     &.blur {
         overflow: hidden;
 
-        #content > *, footer {
+        #content > *,
+        footer {
             filter: blur(5px) brightness(0.7);
             transition: var(--transition);
             pointer-events: none;
@@ -92,11 +93,19 @@ body {
 }
 
 main {
-    max-width: 1000px;
     margin: 0 auto;
-    
+
     &.pad-top {
         padding-top: 150px;
+    }
+
+    &.fullscreen {
+        height: 100%;
+        width: 100%;
+    }
+
+    &:not(.fullscreen) {
+        max-width: 1000px;
     }
 }
 
