@@ -93,19 +93,11 @@ body {
 }
 
 main {
+    max-width: 1000px;
     margin: 0 auto;
 
     &.pad-top {
         padding-top: 150px;
-    }
-
-    &.fullscreen {
-        height: 100%;
-        width: 100%;
-    }
-
-    &:not(.fullscreen) {
-        max-width: 1000px;
     }
 }
 

@@ -10,7 +10,7 @@ import { heroDelay, revealElementsByClassName } from '@utils'
 import style from './nav.module.scss'
 import '@theme-toggles/react/css/Expand.css'
 
-const Nav = ({ animate }) => {
+const Nav = ({ animate, discreet }) => {
     const [mounted, setMounted] = useState(false)
     const { resolvedTheme, setTheme } = useTheme()
 
@@ -41,8 +41,15 @@ const Nav = ({ animate }) => {
         }
     }, [scrollDirection])
 
+    const headerClass = () => {
+        if (discreet) return style.headerScrollUp
+        if (scrolledToTop) return style.header
+        if (scrollingUp) return style.headerScrollUp
+        return style.headerScrollDown
+    }
+
     return (
-        <header className={scrolledToTop ? style.header : scrollingUp ? style.headerScrollUp : style.headerScrollDown}>
+        <header className={headerClass()}>
             <nav className={style.nav}>
                 <div className={`${style.logo} ${revealClasses}`} tabIndex="-1">
                     <Link href="/" aria-label="home">
