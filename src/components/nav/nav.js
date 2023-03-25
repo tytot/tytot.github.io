@@ -26,7 +26,11 @@ const Nav = ({ animate, discreet }) => {
     useEffect(() => {
         setMounted(true)
 
-        revealElementsByClassName(style.reveal, { container: '#__next', delay: heroDelay, interval: revealInterval })
+        const revealOptions = { container: '#__next', delay: heroDelay, interval: revealInterval }
+        if (discreet) {
+            revealOptions.distance = '0px'
+        }
+        revealElementsByClassName(style.reveal, revealOptions)
         window.addEventListener('scroll', handleScroll)
         return () => {
             window.removeEventListener('scroll', handleScroll)

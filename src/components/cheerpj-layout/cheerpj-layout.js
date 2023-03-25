@@ -45,7 +45,7 @@ const CheerpJLayout = ({ jarPath, displayWidth, displayHeight }) => {
                 Skip to Content
             </Link>
 
-            <Nav animate={true} discreet />
+            <Nav animate={false} discreet />
 
             <div id={style.content}>
                 <main id={style.container}></main>
@@ -54,8 +54,14 @@ const CheerpJLayout = ({ jarPath, displayWidth, displayHeight }) => {
             <Script
                 src="https://cjrtnc.leaningtech.com/2.3/loader.js"
                 onLoad={() => {
+                    const showPreloadProgress = (loadedFiles, totalFiles) => {
+                        console.log('Percentage loaded ' + (loadedFiles * 100) / totalFiles)
+                    }
                     cheerpjInit({
                         javaProperties: ['java.protocol.handler.pkgs=com.leaningtech.handlers'],
+                        listener: {
+                            preloadProgress: showPreloadProgress,
+                        },
                     })
                     cheerpjCreateDisplay(displayWidth, displayHeight, document.getElementById(style.container))
                     cheerpjRunJar(`/app/${jarPath}`)
