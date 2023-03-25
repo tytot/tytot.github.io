@@ -1,0 +1,107 @@
+@mixin inline-link {
+    text-decoration: underline solid transparent;
+    transition: var(--transition);
+    color: var(--green);
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline solid currentColor;
+    }
+}
+
+@mixin button {
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: var(--border-radius);
+    font-family: var(--font-sans);
+    font-size: var(--fz-md);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 1.25rem 1.75rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--green-tint);
+        outline: none;
+    }
+    &::after {
+        display: none !important;
+    }
+}
+
+@mixin small-button {
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    font-family: var(--font-sans);
+    font-size: var(--fz-sm);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--green-tint);
+        outline: none;
+    }
+    &::after {
+        display: none !important;
+    }
+}
+
+@mixin big-button {
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.75rem;
+    font-family: var(--font-sans);
+    font-size: var(--fz-lg);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--green-tint);
+        outline: none;
+    }
+    &::after {
+        display: none !important;
+    }
+}
+
+@mixin box-shadow {
+    box-shadow: 0 10px 30px -15px var(--shadow);
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 20px 30px -15px var(--shadow);
+    }
+}
+
+@mixin scroll-shadow($background-color: var(--primary-10), $shadow-color: rgba(129, 91, 91, 0.2), $shadow-size: 1em) {
+    background-color: $background-color;
+    background-image: linear-gradient(to right, $background-color, $background-color), linear-gradient(to right, $background-color, $background-color),
+        linear-gradient(to right, $shadow-color, rgba(255, 255, 255, 0)),
+        linear-gradient(to left, $shadow-color, rgba(255, 255, 255, 0));
+    background-position: left center, right center, left center, right center;
+    background-repeat: no-repeat;
+    background-size: $shadow-size 100%, $shadow-size 100%, calc($shadow-size / 2) 100%, calc($shadow-size / 2) 100%;
+    background-attachment: local, local, scroll, scroll;
+}
+
+@mixin reset-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

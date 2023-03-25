@@ -1,0 +1,115 @@
+@import '@styles/mixins';
+
+.header {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.grid {
+    @include reset-list;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    position: relative;
+    margin: 50px 0;
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.post {
+    position: relative;
+    cursor: default;
+
+    @media (prefers-reduced-motion: no-preference) {
+        &:hover,
+        &:focus-within {
+            .post-inner {
+                transform: translateY(-7px);
+            }
+        }
+    }
+
+    a {
+        position: relative;
+        z-index: 1;
+    }
+
+    .post-inner {
+        @include box-shadow;
+        padding: 2rem 1.75rem;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+        background-color: var(--primary-20);
+    }
+
+    .post-icon {
+        color: var(--green);
+        margin-bottom: 30px;
+    }
+
+    .post-title {
+        margin: 0 0 10px;
+        color: var(--secondary-30);
+        font-size: var(--fz-xxl);
+
+        a {
+            position: static;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                z-index: 0;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    .post-excerpt {
+        color: var(--secondary-20);
+        font-size: 17px;
+    }
+
+    .post-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .post-date {
+        color: var(--secondary-20);
+        font-size: var(--fz-xxs);
+        text-transform: uppercase;
+    }
+
+    ul.post-tags {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            color: var(--green);
+            font-family: var(--font-mono);
+            font-size: var(--fz-xxs);
+            line-height: 1.75;
+
+            &:not(:last-of-type) {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+.reveal {
+    composes: reveal from global;
+}

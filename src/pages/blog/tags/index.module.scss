@@ -1,0 +1,26 @@
+.container {
+    h1 {
+        margin-bottom: 50px;
+    }
+    ul {
+        color: var(--secondary-20);
+
+        li {
+            font-size: var(--fz-xxl);
+
+            a {
+                color: var(--secondary-20);
+                font-family: var(--font-mono);
+
+                .count {
+                    color: var(--secondary-10);
+                    font-size: var(--fz-md);
+                }
+            }
+        }
+    }
+}
+
+.reveal {
+    composes: reveal from global;
+}

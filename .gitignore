@@ -1,1 +1,14 @@
-lib/secrets.js
+node_modules
+
+.DS_Store
+
+.vscode
+.next
+.yarn
+
+optimized/
+!docs/**/optimized/
+next-image-export-optimizer-hashes.json
+
+archive.*
+jobs.*

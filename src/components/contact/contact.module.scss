@@ -1,0 +1,19 @@
+@import '@styles/mixins';
+
+.container {
+    margin: 0 auto 100px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        margin: 0 auto 50px;
+    }
+
+    .email-button {
+        @include big-button;
+        margin-top: 50px;
+    }
+}
+
+.reveal {
+    composes: reveal from global;
+}

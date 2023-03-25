@@ -1,0 +1,118 @@
+@import '@styles/mixins';
+
+.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    padding: 0px 50px;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: var(--nav-background);
+    filter: none !important;
+    pointer-events: auto !important;
+    user-select: auto !important;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+
+    @media (max-width: 1080px) {
+        padding: 0 40px;
+    }
+    @media (max-width: 768px) {
+        padding: 0 25px;
+    }
+}
+.header-scroll-up {
+    composes: header;
+    @media (prefers-reduced-motion: no-preference) {
+        height: var(--nav-scroll-height);
+        transform: translateY(0px);
+        background-color: var(--nav-background);
+        box-shadow: 0 10px 30px -10px var(--shadow);
+
+        :global(.theme-toggle-container) {
+            height: var(--nav-scroll-height) !important;
+        }
+    }
+}
+.header-scroll-down {
+    composes: header;
+    @media (prefers-reduced-motion: no-preference) {
+        height: var(--nav-scroll-height);
+        transform: translateY(calc(var(--nav-scroll-height) * -1));
+        box-shadow: 0 10px 30px -10px var(--shadow);
+
+        :global(.theme-toggle-container) {
+            height: var(--nav-scroll-height) !important;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    color: var(--secondary-30);
+    font-family: var(--font-sans);
+    z-index: 12;
+
+    .logo {
+        a {
+            color: var(--secondary-30);
+            width: 42px;
+            height: 42px;
+
+            &:hover,
+            &:focus {
+                color: var(--green);
+            }
+        }
+    }
+}
+
+.links {
+    display: flex;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    ol {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            margin: 0 5px;
+            font-size: var(--fz-md);
+            font-weight: 600;
+
+            a {
+                padding: 10px;
+
+                svg {
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+
+    .resume-button {
+        @include small-button;
+        margin: 0 15px;
+        font-size: var(--fz-md);
+    }
+
+    :global(.theme-toggle) {
+        font-size: 32px;
+        padding: 0 0 4px 15px;
+        color: var(--secondary-30);
+    }
+}
+
+.reveal {
+    composes: reveal from global;
+}
