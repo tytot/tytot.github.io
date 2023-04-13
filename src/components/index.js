@@ -3,6 +3,7 @@ export { default as Contact } from './contact/contact'
 export { default as Email } from './email/email'
 export { default as Featured } from './featured/featured'
 export { default as Footer } from './footer/footer'
+export { default as Graphic } from './graphic/graphic'
 export { default as Hero } from './hero/hero'
 // export { default as Jobs } from './jobs/jobs';
 export { default as Layout } from './layout'

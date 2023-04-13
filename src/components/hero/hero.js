@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Graphic } from '@components'
 import { revealInterval } from '@config'
 import { revealElementsByClassName } from '@utils'
 import style from './hero.module.scss'
@@ -20,6 +21,7 @@ const Hero = () => {
                     {item}
                 </div>
             ))}
+            <Graphic />
         </section>
     )
 }
