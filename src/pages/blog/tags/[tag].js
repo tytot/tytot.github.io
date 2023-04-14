@@ -35,7 +35,7 @@ const TagTemplate = ({ tag, posts }) => {
                                 <h2>
                                     <Link href={`/blog/${slug}`}>{title}</Link>
                                 </h2>
-                                <p className={style.subtitle}>
+                                <p className={style.subheading}>
                                     <time>
                                         {new Date(date).toLocaleDateString('en-US', {
                                             year: 'numeric',

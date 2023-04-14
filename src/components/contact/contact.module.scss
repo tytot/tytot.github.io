@@ -2,15 +2,43 @@
 
 .container {
     margin: 0 auto 100px;
-    text-align: center;
 
     @media (max-width: 768px) {
         margin: 0 auto 50px;
     }
+}
 
-    .email-button {
-        @include big-button;
-        margin-top: 50px;
+.inner {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    .text {
+        margin-bottom: 30px;
+    }
+
+    .buttons {
+        a {
+            @include big-button;
+            display: block;
+            font-size: var(--fz-xl);
+            margin: 0 auto 15px auto;
+            padding: 1.25rem 1.75rem 1.25rem 1.25rem;
+            white-space: nowrap;
+            width: min-content;
+
+            @media (min-width: 768px) {
+                width: 100%;
+            }
+            
+            svg {
+                padding-right: 0.75rem;
+            }
+        }
     }
 }
 

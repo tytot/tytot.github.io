@@ -54,7 +54,7 @@ const Nav = ({ animate }) => {
                         {navLinks.map(({ name, url, icon }, i) => (
                             <li key={i} className={revealClasses}>
                                 <Link href={url}>
-                                    <FontAwesomeIcon icon={icon} size="sm" />
+                                    <FontAwesomeIcon icon={icon} />
                                     {name}
                                 </Link>
                             </li>

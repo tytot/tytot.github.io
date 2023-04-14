@@ -14,7 +14,7 @@ const NotFoundPage = () => {
             <SEO title="Page Not Found" />
             <main className={`${style.container} ${style.reveal}`}>
                 <h1 className={style.title}>404</h1>
-                <h2 className={style.subtitle}>Page Not Found</h2>
+                <h2 className="medium-heading">Page Not Found</h2>
                 <Link className={style.homeButton} href="/">
                     Go Home
                 </Link>

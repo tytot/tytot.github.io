@@ -147,7 +147,7 @@
             }
 
             svg {
-                margin-right: 10px;
+                margin-right: 12px;
             }
         }
 
@@ -159,19 +159,20 @@
     .resume-button {
         @include big-button;
         margin: 10% auto 0;
+        font-size: var(--fz-xxl);
     }
 
     :global(.theme-toggle-container) {
         display: flex;
         width: 100%;
         height: var(--nav-height);
-        padding: 0 25px;
+        padding: 0 20px;
     }
 
     :global(.theme-toggle) {
         font-size: 32px;
         color: var(--secondary-30);
-        padding: 0;
+        padding: 0 5px;
     }
 }
 

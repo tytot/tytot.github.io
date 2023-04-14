@@ -9,9 +9,17 @@
     height: 100vh;
 
     h1 {
+        color: var(--secondary-20);
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
         color: var(--green);
-        font-size: var(--fz-xl);
-        font-weight: 400;
+        font-size: var(--fz-3xl);
+        margin: 0;
     }
 }
 

@@ -11,5 +11,11 @@
             "@utils": ["src/utils"],
             "@utils/*": ["src/utils/*"]
         }
-    }
+    },
+    "exclude": [
+        ".next",
+        ".yarn",
+        "node_modules",
+        "docs"
+    ]
 }

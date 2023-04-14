@@ -47,7 +47,7 @@ const Featured = () => {
                                     <div className={style.projectLinks}>
                                         {links &&
                                             Object.entries(links).map(([type, url], i) => (
-                                                <a key={i} href={url} aria-label={linkMetadata[type].label}>
+                                                <a key={i} href={url} target="_blank" rel="noreferrer" aria-label={linkMetadata[type].label}>
                                                     <FontAwesomeIcon icon={linkMetadata[type].icon} size="lg" />
                                                 </a>
                                             ))}

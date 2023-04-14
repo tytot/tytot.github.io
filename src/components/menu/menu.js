@@ -127,7 +127,7 @@ const Menu = ({ animate }) => {
                             {navLinks.map(({ name, url, icon }, i) => (
                                 <li key={i}>
                                     <Link href={url} onClick={() => setMenuOpen(false)}>
-                                        <FontAwesomeIcon icon={icon} size="sm" />
+                                        <FontAwesomeIcon icon={icon} />
                                         {name}
                                     </Link>
                                 </li>

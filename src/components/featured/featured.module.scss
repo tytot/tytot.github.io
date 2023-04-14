@@ -151,7 +151,6 @@
         padding: 25px;
         border-radius: var(--border-radius);
         background-color: var(--primary-20);
-        color: var(--secondary-20);
         font-size: var(--fz-lg);
 
         @media (max-width: 768px) {
@@ -186,7 +185,7 @@
 
         li {
             margin: 0 20px 5px 0;
-            color: var(--secondary-20);
+            color: var(--secondary-10);
             font-family: var(--font-mono);
             font-size: var(--fz-xs);
             white-space: nowrap;
@@ -216,7 +215,6 @@
         position: relative;
         margin-top: 10px;
         margin-left: -10px;
-        color: var(--secondary-20);
 
         a {
             padding: 10px;

@@ -1,5 +1,5 @@
-import { faDev, faGithub, faGithubSquare, faInstagramSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faBriefcase, faEnvelope, faIdCard, faKeyboard, faLink } from '@fortawesome/free-solid-svg-icons'
+import { faDev, faGithub, faGithubSquare, faInstagramSquare, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faBriefcase, faEnvelope, faFilePdf, faIdCard, faKeyboard, faLink } from '@fortawesome/free-solid-svg-icons'
 
 module.exports = {
     siteMetadata: {
@@ -11,7 +11,7 @@ module.exports = {
             twitter: '@s_tylin'
         }
     },
-    email: 'tylerhlin@gmail.com',
+    email: 'tyler@tylerl.in',
     navLinks: [
         {
             name: 'About',
@@ -41,14 +41,14 @@ module.exports = {
             icon: faGithubSquare
         },
         {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/tylerhlin',
+            icon: faLinkedin
+        },
+        {
             name: 'Instagram',
             url: 'https://www.instagram.com/t.1in',
             icon: faInstagramSquare
-        },
-        {
-            name: 'Linkedin',
-            url: 'https://www.linkedin.com/in/tylerhlin',
-            icon: faLinkedin
         },
     ],
     linkMetadata: {
@@ -63,6 +63,14 @@ module.exports = {
         external: {
             label: 'External Link',
             icon: faLink
+        },
+        pdf: {
+            label: 'PDF Link',
+            icon: faFilePdf
+        },
+        youtube: {
+            label: 'YouTube Link',
+            icon: faYoutube
         }
     },
     revealOptions: {

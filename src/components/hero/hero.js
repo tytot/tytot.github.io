@@ -8,10 +8,13 @@ const Hero = () => {
         revealElementsByClassName(style.reveal, { interval: revealInterval })
     }, [])
 
-    const one = <h1>Hi, my name is</h1>
-    const two = <h2 className="big-heading">Tyler Lin</h2>
-
-    const items = [one, two]
+    const items = [
+        <h1 className="small-heading">Hi, my name is</h1>,
+        <h2 className="big-heading">Tyler Lin</h2>,
+        <p>full-stack software engineer</p>,
+        <p>web developer</p>,
+        <p>basketball enthusiast</p>,
+    ]
 
     return (
         <section className={style.container}>

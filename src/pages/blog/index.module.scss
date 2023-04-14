@@ -3,6 +3,11 @@
 .header {
     margin-bottom: 50px;
     text-align: center;
+
+    h2 {
+        color: var(--secondary-20);
+        font-family: var(--font-serif);
+    }
 }
 
 .grid {
@@ -71,7 +76,6 @@
     }
 
     .post-excerpt {
-        color: var(--secondary-20);
         font-size: 17px;
     }
 
@@ -84,8 +88,8 @@
     }
 
     .post-date {
-        color: var(--secondary-20);
-        font-size: var(--fz-xxs);
+        color: var(--secondary-10);
+        font-size: var(--fz-xs);
         text-transform: uppercase;
     }
 
@@ -100,7 +104,7 @@
         li {
             color: var(--green);
             font-family: var(--font-mono);
-            font-size: var(--fz-xxs);
+            font-size: var(--fz-xs);
             line-height: 1.75;
 
             &:not(:last-of-type) {

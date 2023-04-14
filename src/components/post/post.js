@@ -28,7 +28,7 @@ const Post = ({ children, meta }) => {
 
                 <header className={`${style.postHeader} ${style.reveal}`}>
                     <h1>{title}</h1>
-                    <p className={style.subtitle}>
+                    <p className={style.subheading}>
                         <time>
                             {new Date(date).toLocaleDateString('en-US', {
                                 year: 'numeric',

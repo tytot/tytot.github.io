@@ -74,6 +74,7 @@
 
 .links {
     display: flex;
+    align-items: center;
 
     @media (max-width: 768px) {
         display: none;
@@ -87,14 +88,14 @@
 
         li {
             margin: 0 5px;
-            font-size: var(--fz-md);
+            font-size: var(--fz-lg);
             font-weight: 600;
 
             a {
                 padding: 10px;
 
                 svg {
-                    margin-right: 7px;
+                    margin-right: 8px;
                 }
             }
         }
@@ -103,12 +104,13 @@
     .resume-button {
         @include small-button;
         margin: 0 15px;
-        font-size: var(--fz-md);
+        font-size: var(--fz-lg);
     }
 
     :global(.theme-toggle) {
         font-size: 32px;
-        padding: 0 0 4px 15px;
+        margin: 0 -5px 0 15px;
+        padding: 5px 5px 10px 5px;
         color: var(--secondary-30);
     }
 }

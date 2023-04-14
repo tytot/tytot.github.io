@@ -70,7 +70,6 @@
             display: flex;
             align-items: center;
             margin-right: -10px;
-            color: var(--secondary-20);
 
             a {
                 padding: 5px 7px;
@@ -100,7 +99,6 @@
     }
 
     .project-description {
-        color: var(--secondary-20);
         font-size: var(--fz-md);
 
         a {
@@ -118,7 +116,7 @@
         list-style: none;
 
         li {
-            color: var(--secondary-20);
+            color: var(--secondary-10);
             font-family: var(--font-mono);
             font-size: var(--fz-xxs);
             line-height: 1.75;

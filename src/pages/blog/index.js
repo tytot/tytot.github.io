@@ -22,7 +22,7 @@ const BlogPage = ({ posts }) => {
             <main className="pad-top">
                 <header className={`${style.header} ${style.reveal}`}>
                     <h1 className="big-heading">Blog</h1>
-                    <p className="subtitle">My musings</p>
+                    <h2 className="small-heading">My musings</h2>
                 </header>
 
                 <ul className={style.grid}>

@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react'
-import { email } from '@config'
+import { email, socialMedia } from '@config'
 import { revealElementsByClassName } from '@utils'
 import style from './contact.module.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Contact = () => {
     useEffect(() => {
@@ -10,16 +13,30 @@ const Contact = () => {
 
     return (
         <section id="contact" className={`${style.container} ${style.reveal}`}>
-            <h2 className="section-heading">Contact Me</h2>
+            <h2 className="section-heading">Get in Touch</h2>
 
-            <p>
-                Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have
-                a question or just want to say hi, I’ll try my best to get back to you!
-            </p>
-
-            <a className={style.emailButton} href={`mailto:${email}`}>
-                Say Hello
-            </a>
+            <div className={style.inner}>
+                <div className={style.text}>
+                    <p>
+                        I am currently looking for full-time software developer or software engineer roles to start upon
+                        my graduation in May 2024.
+                    </p>
+                    <p>
+                        If you have any opportunities available or if you want to chat/ask a question/discuss a
+                        project, please don't hesitate to reach out!
+                    </p>
+                </div>
+                <div className={style.buttons}>
+                    <a href={`mailto:${email}`}>
+                        <FontAwesomeIcon icon={faEnvelope} fixedWidth />
+                        Email me
+                    </a>
+                    <a href={socialMedia.find(({ name }) => name === 'LinkedIn')?.url}>
+                        <FontAwesomeIcon icon={faLinkedin} fixedWidth />
+                        Connect with me
+                    </a>
+                </div>
+            </div>
         </section>
     )
 }
