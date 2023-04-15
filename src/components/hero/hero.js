@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react'
 import { revealInterval } from '@config'
-import { revealElementsByClassName } from '@utils'
+import { heroDelay, navDelay, revealElementsByClassName } from '@utils'
 import style from './hero.module.scss'
 
 const Hero = () => {
     useEffect(() => {
         revealElementsByClassName(style.reveal, { interval: revealInterval })
+        revealElementsByClassName(style.descriptor, { delay: heroDelay + navDelay, interval: revealInterval })
     }, [])
 
     const items = [
         <h1 className="small-heading">Hi, my name is</h1>,
         <h2 className="big-heading">Tyler Lin</h2>,
-        <p>full-stack software engineer</p>,
-        <p>web developer</p>,
-        <p>basketball enthusiast</p>,
+        <p className={`small-heading ${style.descriptor}`}>full-stack software engineer</p>,
+        <p className={`small-heading ${style.descriptor}`}>web developer</p>,
+        <p className={`small-heading ${style.descriptor}`}>basketball enthusiast</p>,
     ]
 
     return (

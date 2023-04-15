@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
     min-height: 100vh;
     height: 100vh;
 
@@ -16,9 +17,8 @@
         margin-bottom: 20px;
     }
 
-    p {
+    .descriptor {
         color: var(--green);
-        font-size: var(--fz-3xl);
         margin: 0;
     }
 }

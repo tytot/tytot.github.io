@@ -21,7 +21,7 @@ const Footer = () => {
 
             <div className={style.credit} tabIndex="-1">
                 <p className={style.version}>
-                    <a href="https://tylerl.in">tylerl.in</a> v2.0.0
+                    <a href="https://tylerl.in">tylerl.in</a> v2.0.1
                 </p>
                 <p>
                     Built by <a href="https://github.com/tytot">Tyler Lin</a> using{' '}
