@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { socialMedia } from '@config'
+import { socialMedia, version } from '@config'
 import style from './footer.module.scss'
 
 const Footer = () => {
@@ -21,7 +21,8 @@ const Footer = () => {
 
             <div className={style.credit} tabIndex="-1">
                 <p className={style.version}>
-                    <a href="https://tylerl.in">tylerl.in</a> v2.0.1
+                    <a href="https://tylerl.in">tylerl.in</a>
+                    {' ' + version}
                 </p>
                 <p>
                     Built by <a href="https://github.com/tytot">Tyler Lin</a> using{' '}

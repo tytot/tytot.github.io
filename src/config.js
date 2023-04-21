@@ -2,6 +2,7 @@ import { faDev, faGithub, faGithubSquare, faInstagramSquare, faLinkedin, faYoutu
 import { faBriefcase, faEnvelope, faFilePdf, faIdCard, faKeyboard, faLink } from '@fortawesome/free-solid-svg-icons'
 
 module.exports = {
+    version: '2.0.2',
     siteMetadata: {
         title: 'Tyler Lin',
         description: 'Hi!',
