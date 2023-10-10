@@ -13,7 +13,7 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "export": "next build && next export -o docs && next-image-export-optimizer && touch ./docs/.nojekyll",
+        "export": "next build && next export -o docs && next-image-export-optimizer && type nul > ./docs/.nojekyll && echo tylerl.in > ./docs/CNAME",
         "serve": "serve ./docs",
         "lint": "next lint"
     },
