@@ -1,0 +1,47 @@
+---
+title: 'meetoo Devlog #1: iCloud Calendar Integration'
+date: '2023-10-8'
+excerpt: 'For the past few months, I have been working on an app for iOS and Android called **meetoo** that helps make it easier for friends to plan meetups. The gist of it is that users create profiles and sync their personal calendars, allowing their friends in the app to see when they are free or busy.'
+coverImage: '/assets/blog/hello-world/cover.jpg'
+iconPrefix: 'fa-solid'
+iconName: 'code'
+tags:
+    - meetoo
+    - programming
+---
+
+For the past few months, I have been working on an app for iOS and Android called **meetoo** that helps make it easier for friends to plan meetups. The gist of it is that users create profiles and sync their personal calendars, allowing their friends in the app to see when they are free or busy.
+
+<div className="no-filter">
+
+![A screenshot of the meetoo calendar connection setup screen](/public/images/blog/meetoo-devlog-1/setup.png)
+The setup page, where users connect to calendars.
+![A screenshot of the meetoo calendar page on the home screen](/public/images/blog/meetoo-devlog-1/calendar.png)
+The calendar view, where events from connected calendars are aggregated.
+![A screenshot of a meetoo friend profile](/public/images/blog/meetoo-devlog-1/friend.png)
+A friend's profile, which displays her availability.
+
+</div>
+
+Users can then schedule meetings with their friends by cross-referencing everyone's availabilities. Each meeting invitee is prompted to respond with _yes_, _tentative_, or _no_, and participants can see everyone else's response. A meeting can also be added to a user's personal calendar as an event. If you've ever used the Microsoft Teams scheduling assistant, it's basically the same concept but geared more towards a social context.
+
+<div className="no-filter">
+
+![A screenshot of the meetoo scheduler screen](/public/images/blog/meetoo-devlog-1/scheduler.png)
+The scheduler screen, where users schedule meetings with friends.
+![A screenshot of a meetoo meeting](/public/images/blog/meetoo-devlog-1/meeting.png)
+A meeting page, which displays the meeting details and prompts invitees to RSVP.
+![A screenshot of the meetoo meeting timeline on the home screen](/public/images/blog/meetoo-devlog-1/timeline.png)
+The meeting timeline, where past, current, and future meetings are shown.
+
+</div>
+
+The purpose of this devlog is to document some of the challenges I face while developing meetoo. There are so many moving parts that it's easy to forget how or why I did certain things, so I think that it would be interesting to look back on these posts. Hopefully, these can also serve as insight for other people (like you!) who are either facing similar scenarios or just interested in meetoo.
+
+For context, meetoo is made using [Flutter](https://flutter.dev/) and I'm using [Supabase](https://supabase.com/) for authentication, database management, and other backend stuff. Let's get to it!
+
+## The Scenario
+
+As I mentioned, meetoo users sync their personal calendars so their friends can see their availabilities. I started off by integrating Google Calendar, which was pretty straightforward thanks to the well-documented [Google Calendar API](https://developers.google.com/calendar/api/guides/overview) and the [googleapis Dart package](https://pub.dev/packages/googleapis).
+
+My next goal was to integrate Apple Calendar, or, more accurately, iCloud Calendar into meetoo. I could immediately sense that it would be more difficult—as far as I can tell, there's no official public API or documentation for interacting with iCloud Calendar. Anyways, I don't feel like writing anymore, so I'll finish this post later (hopefully) 🤓
