@@ -21,37 +21,6 @@ const TagTemplate = ({ tag, posts }) => {
                         <Link href="/blog">All Posts</Link>
                     </span>
 
-<<<<<<< HEAD
-                <ul className={`fancy-list ${style.reveal}`}>
-                    {posts.map((post) => {
-                        const { slug, title, date, tags } = post
-                        return (
-                            <li key={slug} className={style.reveal}>
-                                <h2>
-                                    <Link href={`/blog/${slug}`}>{title}</Link>
-                                </h2>
-                                <p className={style.subheading}>
-                                    <time>
-                                        {new Date(date).toLocaleDateString('en-US', {
-                                            year: 'numeric',
-                                            month: 'long',
-                                            day: 'numeric',
-                                        })}
-                                    </time>
-                                    <span>&nbsp;&mdash;&nbsp;</span>
-                                    {tags &&
-                                        tags.map((tag, i) => (
-                                            <Link key={i} href={`/blog/tags/${tag}/`} className={style.tag}>
-                                                #{tag}
-                                            </Link>
-                                        ))}
-                                </p>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </main>
-=======
                     <h1 className={style.reveal}>
                         <span className={style.tagHeader}>#{tag}</span>
                         <span>
@@ -67,7 +36,7 @@ const TagTemplate = ({ tag, posts }) => {
                                     <h2>
                                         <Link href={`/blog/${slug}`}>{title}</Link>
                                     </h2>
-                                    <p className={style.subtitle}>
+                                    <p className={style.subheading}>
                                         <time>
                                             {new Date(date).toLocaleDateString('en-US', {
                                                 year: 'numeric',
@@ -89,7 +58,6 @@ const TagTemplate = ({ tag, posts }) => {
                     </ul>
                 </main>
             </Layout>
->>>>>>> cheerpj
         </>
     )
 }

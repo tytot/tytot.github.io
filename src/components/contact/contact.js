@@ -17,10 +17,8 @@ const Contact = () => {
 
             <div className={style.inner}>
                 <div className={style.text}>
-                    <p>I am currently looking for software engineer internship opportunities for the summer of 2024.</p>
                     <p>
-                        If you have any opportunities available or if you want to chat/ask a question/discuss a project,
-                        please don't hesitate to reach out!
+                        If you want to chat, ask a question, or discuss a project, please don't hesitate to reach out!
                     </p>
                 </div>
                 <div className={style.buttons}>

@@ -1,5 +1,23 @@
 const featured = [
     {
+        title: 'meetoo',
+        description: `An app for iOS and Android that streamlines the process of scheduling meetings and hangouts with friends, classmates, or colleagues. meetoo users organize meetings by comparing their friends' availabilities, which are determined by their Google, iCloud, and Outlook calendars. The app features a friend system, RSVP capabilities, and a chat feature. Built using Flutter and backed by a PostgreSQL database hosted on Supabase.`,
+        links: {
+            external: 'https://meetoo.app',
+        },
+        tags: [
+            'Flutter',
+            'Dart',
+            'Supabase',
+            'PostgreSQL',
+            'Google Calendar API',
+            'CalDAV',
+            'Microsoft Graph',
+            'OneSignal',
+        ],
+        image: 'featured/meetoo.png',
+    },
+    {
         title: 'Attendance for Google Meet™',
         description: `A Google Chrome extension with over 25,000 users from over 100 countries that automates attendance tracking in Google Meet calls by enabling users to view and sort attendance, create and edit class rosters, and export organized logs to Google Sheets through a Material Design user interface. 
             Awarded a Featured badge by the Google Chrome Web Store team for meeting a high standard of user experience and technical design.`,

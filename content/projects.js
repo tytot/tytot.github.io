@@ -1,16 +1,15 @@
-import { faChessPawn, faCircleDot, faFishFins, faGlobe, faHeadset, faHospitalUser, faHouseMedicalFlag, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+import {
+    faChessPawn,
+    faCircleDot,
+    faFishFins,
+    faGlobe,
+    faHeadset,
+    faHospitalUser,
+    faHouseMedicalFlag,
+    faLaptopCode,
+} from '@fortawesome/free-solid-svg-icons'
 
 const projects = [
-    {
-        title: 'tylerl.in',
-        description: `This website!`,
-        icon: faGlobe,
-        links: {
-            external: 'https://tylerl.in/',
-            github: 'https://github.com/tytot/tytot.github.io',
-        },
-        tags: ['Next.js', 'React', 'JavaScript', 'Node.js', 'Yarn', 'HTML', 'SCSS'],
-    },
     {
         title: 'BrainFun',
         description: `A website made using Vue.js that teaches low-level programming concepts through Brainf*ck, an esoteric language. Features 19 unique exercises, an Material Design user interface with a custom console and tape visualizer, and Firebase authentication.`,
@@ -38,7 +37,7 @@ const projects = [
         icon: faHospitalUser,
         links: {
             github: 'https://github.com/tytot/medical-record-blockchain',
-            pdf: '/medical-record-blockchain-poster.pdf'
+            pdf: '/medical-record-blockchain-poster.pdf',
         },
         tags: [
             'Blockchain',
@@ -67,7 +66,7 @@ const projects = [
         icon: faFishFins,
         links: {
             github: 'https://github.com/tytot/bubble-fishing-src',
-            youtube: 'https://www.youtube.com/watch?v=TYXJr6MEfYY'
+            youtube: 'https://www.youtube.com/watch?v=TYXJr6MEfYY',
         },
         tags: ['C#', 'Unity'],
     },
@@ -76,6 +75,7 @@ const projects = [
         description: `An realistic pool simulation made using Java Swing that includes the game modes of 8-ball, 9-ball, and 10-ball. Features score-keeping, accurate physics and collision detection, and aim guidance. Inspired by GamePigeon 8-ball.`,
         icon: faCircleDot,
         links: {
+            play: '/pool',
             github: 'https://github.com/tytot/pool',
         },
         tags: ['Java', 'Java Swing'],
@@ -88,6 +88,16 @@ const projects = [
             github: 'https://github.com/tytot/chinese-checkers',
         },
         tags: ['Java'],
+    },
+    {
+        title: 'tylerl.in',
+        description: `This website!`,
+        icon: faGlobe,
+        links: {
+            external: 'https://tylerl.in/',
+            github: 'https://github.com/tytot/tytot.github.io',
+        },
+        tags: ['Next.js', 'React', 'JavaScript', 'Node.js', 'Yarn', 'HTML', 'SCSS'],
     },
 ]
 

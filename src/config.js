@@ -1,13 +1,23 @@
-<<<<<<< HEAD
-import { faDev, faGithub, faGithubSquare, faInstagramSquare, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { faBriefcase, faEnvelope, faFilePdf, faIdCard, faKeyboard, faLink } from '@fortawesome/free-solid-svg-icons'
-=======
-import { faDev, faGithub, faGithubSquare, faInstagramSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faBriefcase, faEnvelope, faIdCard, faKeyboard, faLink, faPlay } from '@fortawesome/free-solid-svg-icons'
->>>>>>> cheerpj
+import {
+    faDev,
+    faGithub,
+    faGithubSquare,
+    faInstagramSquare,
+    faLinkedin,
+    faYoutube,
+} from '@fortawesome/free-brands-svg-icons'
+import {
+    faBriefcase,
+    faEnvelope,
+    faFilePdf,
+    faIdCard,
+    faKeyboard,
+    faLink,
+    faPlay,
+} from '@fortawesome/free-solid-svg-icons'
 
 module.exports = {
-    version: '2.0.2',
+    version: '2.0.3',
     siteMetadata: {
         title: 'Tyler Lin',
         description: 'Hi!',
@@ -49,21 +59,13 @@ module.exports = {
         {
             name: 'LinkedIn',
             url: 'https://www.linkedin.com/in/tylerhlin',
-            icon: faLinkedin
+            icon: faLinkedin,
         },
         {
             name: 'Instagram',
             url: 'https://www.instagram.com/t.1in',
             icon: faInstagramSquare,
         },
-<<<<<<< HEAD
-=======
-        {
-            name: 'Linkedin',
-            url: 'https://www.linkedin.com/in/tylerhlin',
-            icon: faLinkedin,
-        },
->>>>>>> cheerpj
     ],
     linkMetadata: {
         github: {
@@ -76,25 +78,20 @@ module.exports = {
         },
         external: {
             label: 'External Link',
-<<<<<<< HEAD
-            icon: faLink
+            icon: faLink,
         },
         pdf: {
             label: 'PDF Link',
-            icon: faFilePdf
+            icon: faFilePdf,
         },
         youtube: {
             label: 'YouTube Link',
-            icon: faYoutube
-        }
-=======
-            icon: faLink,
+            icon: faYoutube,
         },
         play: {
             label: 'Playable Link',
             icon: faPlay,
         },
->>>>>>> cheerpj
     },
     newTabHrefs: ['/Lin_Tyler_Resume.pdf', '/the-puzzled-cube'],
     revealOptions: {

@@ -12,15 +12,6 @@ const NotFoundPage = () => {
     return (
         <>
             <SEO title="Page Not Found" />
-<<<<<<< HEAD
-            <main className={`${style.container} ${style.reveal}`}>
-                <h1 className={style.title}>404</h1>
-                <h2 className="medium-heading">Page Not Found</h2>
-                <Link className={style.homeButton} href="/">
-                    Go Home
-                </Link>
-            </main>
-=======
             <Layout>
                 <main className={`${style.container} ${style.reveal}`}>
                     <h1 className={style.title}>404</h1>
@@ -30,7 +21,6 @@ const NotFoundPage = () => {
                     </Link>
                 </main>
             </Layout>
->>>>>>> cheerpj
         </>
     )
 }

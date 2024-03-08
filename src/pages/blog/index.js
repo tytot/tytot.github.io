@@ -19,20 +19,12 @@ const BlogPage = ({ posts }) => {
     return (
         <>
             <SEO title="Blog" />
-<<<<<<< HEAD
-            <main className="pad-top">
-                <header className={`${style.header} ${style.reveal}`}>
-                    <h1 className="big-heading">Blog</h1>
-                    <h2 className="small-heading">My musings</h2>
-                </header>
-=======
             <Layout>
                 <main className="pad-top">
                     <header className={`${style.header} ${style.reveal}`}>
                         <h1 className="big-heading">Blog</h1>
                         <p className="subtitle">My musings</p>
                     </header>
->>>>>>> cheerpj
 
                     <ul className={style.grid}>
                         {posts.map(({ slug, title, date, excerpt, iconPrefix, iconName, tags }, i) => (
