@@ -7,7 +7,6 @@ const Layout = ({ children }) => {
     useEffect(() => {
         const links = Array.from(document.querySelectorAll('a'))
         links.forEach((link) => {
-            console.log(link.href)
             if (link.host !== window.location.host || newTabHrefs.includes(link.getAttribute('href'))) {
                 link.setAttribute('rel', 'noreferrer')
                 link.setAttribute('target', '_blank')

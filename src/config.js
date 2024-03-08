@@ -93,7 +93,7 @@ module.exports = {
             icon: faPlay,
         },
     },
-    newTabHrefs: ['/Lin_Tyler_Resume.pdf', '/the-puzzled-cube'],
+    newTabHrefs: ['/Lin_Tyler_Resume.pdf', '/the-puzzled-cube', '/pool'],
     revealOptions: {
         distance: '20px',
         duration: 500,

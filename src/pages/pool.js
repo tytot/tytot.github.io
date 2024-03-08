@@ -11,7 +11,7 @@ const PoolPage = () => {
                 <h1>Pool</h1>
                 <p>
                     A Java Swing rendition of Pool. This was one of the first programming projects I ever made, so
-                    please excuse the questionable physics. The embedded version below runs painfully slow, so I suggest
+                    please excuse the questionable physics. The embedded version below runs a bit slow, so I suggest
                     downloading the JAR and running it on your machine!
                 </p>
                 <a href="/Pool.jar" className="download">
