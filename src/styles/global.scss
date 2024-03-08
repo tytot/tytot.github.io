@@ -74,6 +74,15 @@ body {
     }
 }
 
+.download {
+    @include button;
+    margin-bottom: 40px;
+    
+    svg {
+        margin-right: 10px;
+    }
+}
+
 #logo {
     color: var(--green);
 }
