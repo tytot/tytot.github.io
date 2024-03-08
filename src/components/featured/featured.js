@@ -25,7 +25,7 @@ const Featured = () => {
                                     <p className={style.projectOverline}>Featured Project</p>
 
                                     <h3 className={style.projectTitle}>
-                                        <a href={links.external}>{title}</a>
+                                        <a href={Object.values(links)[0]}>{title}</a>
                                     </h3>
 
                                     <div

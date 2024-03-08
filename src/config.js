@@ -1,5 +1,5 @@
 import { faDev, faGithub, faGithubSquare, faInstagramSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faBriefcase, faEnvelope, faIdCard, faKeyboard, faLink } from '@fortawesome/free-solid-svg-icons'
+import { faBriefcase, faEnvelope, faIdCard, faKeyboard, faLink, faPlay } from '@fortawesome/free-solid-svg-icons'
 
 module.exports = {
     siteMetadata: {
@@ -63,6 +63,10 @@ module.exports = {
         external: {
             label: 'External Link',
             icon: faLink,
+        },
+        play: {
+            label: 'Playable Link',
+            icon: faPlay,
         },
     },
     newTabHrefs: ['/Lin_Tyler_Resume.pdf', '/the-puzzled-cube'],

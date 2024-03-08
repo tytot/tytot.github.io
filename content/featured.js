@@ -16,7 +16,7 @@ const featured = [
         description: `A puzzle-platformer video game built from scratch using Java Swing that features 24 unique levels of increasing complexity, 3 unique power-ups, and custom graphics, animations, and audio. 
             Compete to solve the brain-teasers and earn a spot on the Node.js global leaderboard!`,
         links: {
-            external: '/the-puzzled-cube',
+            play: '/the-puzzled-cube',
             github: 'https://github.com/tytot/the-puzzled-cube',
         },
         tags: ['Java', 'Java Swing', 'JavaScript', 'Node.js', 'SQL'],

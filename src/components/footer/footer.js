@@ -27,9 +27,6 @@ const Footer = () => {
                     Built by <a href="https://github.com/tytot">Tyler Lin</a> using{' '}
                     <a href="https://nextjs.org">Next.js</a>
                 </p>
-                <p className={style.footnote}>
-                    Inspired by <a href="https://brittanychiang.com">brittanychiang.com</a>
-                </p>
             </div>
         </footer>
     )
