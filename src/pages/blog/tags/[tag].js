@@ -32,7 +32,7 @@ const TagTemplate = ({ tag, posts }) => {
                         {posts.map((post) => {
                             const { slug, title, date, tags } = post
                             return (
-                                <li key={slug} className={style.reveal}>
+                                <li key={slug}>
                                     <h2>
                                         <Link href={`/blog/${slug}`}>{title}</Link>
                                     </h2>

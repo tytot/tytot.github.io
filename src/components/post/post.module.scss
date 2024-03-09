@@ -232,7 +232,3 @@
         @include scroll-shadow($shadow-color: rgba(0, 0, 0, 0.2), $shadow-size: 2em);
     }
 }
-
-.reveal {
-    composes: reveal from global;
-}
