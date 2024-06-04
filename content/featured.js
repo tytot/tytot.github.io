@@ -19,7 +19,7 @@ const featured = [
     },
     {
         title: 'Attendance for Google Meet™',
-        description: `A Google Chrome extension with over 25,000 users from over 100 countries that automates attendance tracking in Google Meet calls by enabling users to view and sort attendance, create and edit class rosters, and export organized logs to Google Sheets through a Material Design user interface. 
+        description: `A Google Chrome extension with over 30,000 users from over 100 countries that automates attendance tracking in Google Meet calls by enabling users to view and sort attendance, create and edit class rosters, and export organized logs to Google Sheets through a Material Design user interface. 
             Awarded a Featured badge by the Google Chrome Web Store team for meeting a high standard of user experience and technical design.`,
         links: {
             external:

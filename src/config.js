@@ -17,7 +17,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 module.exports = {
-    version: '2.0.3',
+    version: '2.0.4',
     siteMetadata: {
         title: 'Tyler Lin',
         description: 'Hi!',
