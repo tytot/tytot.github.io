@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react'
-import ExportedImage from 'next-image-export-optimizer'
-import { revealElementsByClassName } from '@utils'
-import headshot from '@public/images/me.jpg'
-import style from './about.module.scss'
+import React, { useEffect } from 'react';
+import ExportedImage from 'next-image-export-optimizer';
+import { revealElementsByClassName } from '@utils';
+import headshot from '@public/images/me.jpg';
+import style from './about.module.scss';
 
 const About = () => {
     useEffect(() => {
-        revealElementsByClassName(style.reveal)
-    }, [])
+        revealElementsByClassName(style.reveal);
+    }, []);
 
     return (
         <section id="about" className={style.reveal}>
@@ -31,11 +31,10 @@ const About = () => {
                     </p>
                     <p>
                         My goal is to leverage modern computing technologies to build robust and seamless user
-                        experiences. I have professional experience contributing to large-scale applications through
-                        data visualization and web development, and I have become a more pragmatic programmer as a
-                        result. I pride myself on writing robust, optimized, and maintainable code, and I'm always
-                        looking for opportunities to hone my skills by working on a variety of{' '}
-                        <a href="#projects">projects</a>.
+                        experiences. I have professional experience contributing to large-scale applications, and I have
+                        become a more pragmatic programmer as a result. I pride myself on writing optimized and
+                        maintainable code, and I'm always looking for opportunities to hone my skills by working on a
+                        variety of <a href="#projects">projects</a>.
                     </p>
                     <p>
                         Outside of software development, I enjoy playing basketball and tennis, listening to music, and
@@ -44,7 +43,7 @@ const About = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default About
+export default About;

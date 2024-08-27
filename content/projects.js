@@ -56,7 +56,7 @@ const projects = [
         description: `A system that enables customizable proximity voice chat in a Minecraft server via Discord. Consists of a Node.js REST API, a Java Bukkit plugin, and an executeable WPF .NET interface made using XAML and C#.`,
         icon: faHeadset,
         links: {
-            github: 'https://github.com/tytot/medical-record-blockchain',
+            github: 'https://github.com/tytot/minecraft-proximity-discord-chat',
         },
         tags: ['Java', 'Maven', 'Node.js', 'WPF', 'C#', 'Discord GameSDK', 'XAML'],
     },

@@ -13,7 +13,7 @@ const Hero = () => {
         <h1 className="small-heading">Hi, my name is</h1>,
         <h2 className="big-heading">Tyler Lin</h2>,
         <p className={`small-heading ${style.descriptor}`}>full-stack software engineer</p>,
-        <p className={`small-heading ${style.descriptor}`}>web developer</p>,
+        <p className={`small-heading ${style.descriptor}`}>UI designer</p>,
         <p className={`small-heading ${style.descriptor}`}>basketball enthusiast</p>,
     ]
 
